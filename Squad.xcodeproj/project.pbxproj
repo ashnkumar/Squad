@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		425D54971B2256950069FF61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 425D54961B2256950069FF61 /* main.m */; };
 		425D549A1B2256950069FF61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 425D54991B2256950069FF61 /* AppDelegate.m */; };
-		425D549D1B2256950069FF61 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 425D549C1B2256950069FF61 /* FirstViewController.m */; };
+		425D549D1B2256950069FF61 /* TeamScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 425D549C1B2256950069FF61 /* TeamScreenViewController.m */; };
 		425D54A01B2256950069FF61 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 425D549F1B2256950069FF61 /* SecondViewController.m */; };
 		425D54A31B2256950069FF61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 425D54A11B2256950069FF61 /* Main.storyboard */; };
 		425D54A51B2256950069FF61 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 425D54A41B2256950069FF61 /* Images.xcassets */; };
 		425D54A81B2256950069FF61 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 425D54A61B2256950069FF61 /* LaunchScreen.xib */; };
 		425D54B41B2256950069FF61 /* SquadTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 425D54B31B2256950069FF61 /* SquadTests.m */; };
+		425D54C91B22680E0069FF61 /* RGPaperLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 425D54C61B22680E0069FF61 /* RGPaperLayout.m */; };
+		425D54CA1B22680E0069FF61 /* RGCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 425D54C81B22680E0069FF61 /* RGCollectionViewCell.m */; };
 		697BF01C5D939F5E2C5E773F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B56D4867292F4F4E68D05083 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -34,8 +36,8 @@
 		425D54961B2256950069FF61 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		425D54981B2256950069FF61 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		425D54991B2256950069FF61 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		425D549B1B2256950069FF61 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		425D549C1B2256950069FF61 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		425D549B1B2256950069FF61 /* TeamScreenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeamScreenViewController.h; sourceTree = "<group>"; };
+		425D549C1B2256950069FF61 /* TeamScreenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeamScreenViewController.m; sourceTree = "<group>"; };
 		425D549E1B2256950069FF61 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		425D549F1B2256950069FF61 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		425D54A21B2256950069FF61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -44,6 +46,10 @@
 		425D54AD1B2256950069FF61 /* SquadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SquadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		425D54B21B2256950069FF61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		425D54B31B2256950069FF61 /* SquadTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SquadTests.m; sourceTree = "<group>"; };
+		425D54C51B22680E0069FF61 /* RGPaperLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGPaperLayout.h; sourceTree = "<group>"; };
+		425D54C61B22680E0069FF61 /* RGPaperLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGPaperLayout.m; sourceTree = "<group>"; };
+		425D54C71B22680E0069FF61 /* RGCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCollectionViewCell.h; sourceTree = "<group>"; };
+		425D54C81B22680E0069FF61 /* RGCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCollectionViewCell.m; sourceTree = "<group>"; };
 		B56D4867292F4F4E68D05083 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D24CC1498F348284CB857A38 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DADC4A3E965F103C0E1E18F0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -91,10 +97,9 @@
 		425D54931B2256950069FF61 /* Squad */ = {
 			isa = PBXGroup;
 			children = (
+				425D54BD1B2262070069FF61 /* Team Screen */,
 				425D54981B2256950069FF61 /* AppDelegate.h */,
 				425D54991B2256950069FF61 /* AppDelegate.m */,
-				425D549B1B2256950069FF61 /* FirstViewController.h */,
-				425D549C1B2256950069FF61 /* FirstViewController.m */,
 				425D549E1B2256950069FF61 /* SecondViewController.h */,
 				425D549F1B2256950069FF61 /* SecondViewController.m */,
 				425D54A11B2256950069FF61 /* Main.storyboard */,
@@ -129,6 +134,27 @@
 				425D54B21B2256950069FF61 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		425D54BD1B2262070069FF61 /* Team Screen */ = {
+			isa = PBXGroup;
+			children = (
+				425D549B1B2256950069FF61 /* TeamScreenViewController.h */,
+				425D549C1B2256950069FF61 /* TeamScreenViewController.m */,
+				425D54BE1B22621F0069FF61 /* RGCollectionView */,
+			);
+			name = "Team Screen";
+			sourceTree = "<group>";
+		};
+		425D54BE1B22621F0069FF61 /* RGCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				425D54C51B22680E0069FF61 /* RGPaperLayout.h */,
+				425D54C61B22680E0069FF61 /* RGPaperLayout.m */,
+				425D54C71B22680E0069FF61 /* RGCollectionViewCell.h */,
+				425D54C81B22680E0069FF61 /* RGCollectionViewCell.m */,
+			);
+			name = RGCollectionView;
 			sourceTree = "<group>";
 		};
 		BBF069C5C3934D92A037BB09 /* Frameworks */ = {
@@ -284,9 +310,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				425D54C91B22680E0069FF61 /* RGPaperLayout.m in Sources */,
 				425D54A01B2256950069FF61 /* SecondViewController.m in Sources */,
 				425D549A1B2256950069FF61 /* AppDelegate.m in Sources */,
-				425D549D1B2256950069FF61 /* FirstViewController.m in Sources */,
+				425D54CA1B22680E0069FF61 /* RGCollectionViewCell.m in Sources */,
+				425D549D1B2256950069FF61 /* TeamScreenViewController.m in Sources */,
 				425D54971B2256950069FF61 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

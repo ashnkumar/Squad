@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  TeamScreenViewController.h
 //  Squad
 //
 //  Created by Ashwin Kumar on 6/5/15.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
+@interface TeamScreenViewController : UIViewController
 
 
 @end
