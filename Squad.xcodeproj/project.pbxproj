@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		424D1EB11B23EFA0002509A9 /* CardAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 424D1EB01B23EFA0002509A9 /* CardAnimator.m */; };
+		424D1EB51B23F169002509A9 /* TeamScreenDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 424D1EB41B23F169002509A9 /* TeamScreenDetailViewController.m */; };
 		425D54971B2256950069FF61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 425D54961B2256950069FF61 /* main.m */; };
 		425D549A1B2256950069FF61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 425D54991B2256950069FF61 /* AppDelegate.m */; };
 		425D549D1B2256950069FF61 /* TeamScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 425D549C1B2256950069FF61 /* TeamScreenViewController.m */; };
@@ -17,6 +19,8 @@
 		425D54B41B2256950069FF61 /* SquadTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 425D54B31B2256950069FF61 /* SquadTests.m */; };
 		425D54C91B22680E0069FF61 /* RGPaperLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 425D54C61B22680E0069FF61 /* RGPaperLayout.m */; };
 		425D54CA1B22680E0069FF61 /* RGCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 425D54C81B22680E0069FF61 /* RGCollectionViewCell.m */; };
+		425D54CD1B226D2A0069FF61 /* Ubuntu-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 425D54CC1B226D000069FF61 /* Ubuntu-Regular.ttf */; };
+		425D54D01B23C9B20069FF61 /* AppConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 425D54CF1B23C9B20069FF61 /* AppConstants.m */; };
 		697BF01C5D939F5E2C5E773F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B56D4867292F4F4E68D05083 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		424D1EAF1B23EFA0002509A9 /* CardAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardAnimator.h; path = "Team Screen/Card Animations/CardAnimator.h"; sourceTree = "<group>"; };
+		424D1EB01B23EFA0002509A9 /* CardAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardAnimator.m; path = "Team Screen/Card Animations/CardAnimator.m"; sourceTree = "<group>"; };
+		424D1EB31B23F169002509A9 /* TeamScreenDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TeamScreenDetailViewController.h; path = "Team Screen/Detail Screen/TeamScreenDetailViewController.h"; sourceTree = "<group>"; };
+		424D1EB41B23F169002509A9 /* TeamScreenDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TeamScreenDetailViewController.m; path = "Team Screen/Detail Screen/TeamScreenDetailViewController.m"; sourceTree = "<group>"; };
 		425D54911B2256950069FF61 /* Squad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Squad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		425D54951B2256950069FF61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		425D54961B2256950069FF61 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -50,6 +58,9 @@
 		425D54C61B22680E0069FF61 /* RGPaperLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGPaperLayout.m; sourceTree = "<group>"; };
 		425D54C71B22680E0069FF61 /* RGCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCollectionViewCell.h; sourceTree = "<group>"; };
 		425D54C81B22680E0069FF61 /* RGCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCollectionViewCell.m; sourceTree = "<group>"; };
+		425D54CC1B226D000069FF61 /* Ubuntu-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Regular.ttf"; sourceTree = "<group>"; };
+		425D54CE1B23C9B20069FF61 /* AppConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppConstants.h; path = Resources/AppConstants.h; sourceTree = "<group>"; };
+		425D54CF1B23C9B20069FF61 /* AppConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppConstants.m; path = Resources/AppConstants.m; sourceTree = "<group>"; };
 		B56D4867292F4F4E68D05083 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D24CC1498F348284CB857A38 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DADC4A3E965F103C0E1E18F0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -74,6 +85,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		424D1EAE1B23EF79002509A9 /* Card Animations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Card Animations";
+			sourceTree = "<group>";
+		};
+		424D1EB21B23F145002509A9 /* Detail Screen */ = {
+			isa = PBXGroup;
+			children = (
+				424D1EB31B23F169002509A9 /* TeamScreenDetailViewController.h */,
+				424D1EB41B23F169002509A9 /* TeamScreenDetailViewController.m */,
+			);
+			name = "Detail Screen";
+			sourceTree = "<group>";
+		};
 		425D54881B2256950069FF61 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +132,7 @@
 				425D54A11B2256950069FF61 /* Main.storyboard */,
 				425D54A41B2256950069FF61 /* Images.xcassets */,
 				425D54A61B2256950069FF61 /* LaunchScreen.xib */,
+				425D54CB1B226CBE0069FF61 /* Resources */,
 				425D54941B2256950069FF61 /* Supporting Files */,
 			);
 			path = Squad;
@@ -139,7 +167,11 @@
 		425D54BD1B2262070069FF61 /* Team Screen */ = {
 			isa = PBXGroup;
 			children = (
+				424D1EB21B23F145002509A9 /* Detail Screen */,
+				424D1EAE1B23EF79002509A9 /* Card Animations */,
 				425D549B1B2256950069FF61 /* TeamScreenViewController.h */,
+				424D1EAF1B23EFA0002509A9 /* CardAnimator.h */,
+				424D1EB01B23EFA0002509A9 /* CardAnimator.m */,
 				425D549C1B2256950069FF61 /* TeamScreenViewController.m */,
 				425D54BE1B22621F0069FF61 /* RGCollectionView */,
 			);
@@ -155,6 +187,16 @@
 				425D54C81B22680E0069FF61 /* RGCollectionViewCell.m */,
 			);
 			name = RGCollectionView;
+			sourceTree = "<group>";
+		};
+		425D54CB1B226CBE0069FF61 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				425D54CC1B226D000069FF61 /* Ubuntu-Regular.ttf */,
+				425D54CE1B23C9B20069FF61 /* AppConstants.h */,
+				425D54CF1B23C9B20069FF61 /* AppConstants.m */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		BBF069C5C3934D92A037BB09 /* Frameworks */ = {
@@ -257,6 +299,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				425D54CD1B226D2A0069FF61 /* Ubuntu-Regular.ttf in Resources */,
 				425D54A31B2256950069FF61 /* Main.storyboard in Resources */,
 				425D54A81B2256950069FF61 /* LaunchScreen.xib in Resources */,
 				425D54A51B2256950069FF61 /* Images.xcassets in Resources */,
@@ -312,9 +355,12 @@
 			files = (
 				425D54C91B22680E0069FF61 /* RGPaperLayout.m in Sources */,
 				425D54A01B2256950069FF61 /* SecondViewController.m in Sources */,
+				425D54D01B23C9B20069FF61 /* AppConstants.m in Sources */,
 				425D549A1B2256950069FF61 /* AppDelegate.m in Sources */,
 				425D54CA1B22680E0069FF61 /* RGCollectionViewCell.m in Sources */,
+				424D1EB51B23F169002509A9 /* TeamScreenDetailViewController.m in Sources */,
 				425D549D1B2256950069FF61 /* TeamScreenViewController.m in Sources */,
+				424D1EB11B23EFA0002509A9 /* CardAnimator.m in Sources */,
 				425D54971B2256950069FF61 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

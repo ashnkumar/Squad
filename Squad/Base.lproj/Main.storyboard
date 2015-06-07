@@ -4,6 +4,12 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Ubuntu-Regular.ttf">
+            <string>Ubuntu</string>
+            <string>Ubuntu</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--First-->
         <scene sceneID="hNz-n2-bh7">
@@ -31,23 +37,9 @@
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="293" height="252"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nWj-2n-t26">
-                                                    <rect key="frame" x="0.0" y="0.0" width="293" height="252"/>
-                                                </imageView>
-                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <constraints>
-                                            <constraint firstAttribute="trailingMargin" secondItem="nWj-2n-t26" secondAttribute="trailing" constant="-8" id="4q6-Zn-5Ux"/>
-                                            <constraint firstItem="nWj-2n-t26" firstAttribute="top" secondItem="YU3-Mj-TZC" secondAttribute="topMargin" constant="-8" id="Fxo-zh-xWy"/>
-                                            <constraint firstItem="nWj-2n-t26" firstAttribute="leading" secondItem="YU3-Mj-TZC" secondAttribute="leadingMargin" constant="-8" id="MjF-im-8fU"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="nWj-2n-t26" secondAttribute="bottom" constant="-8" id="fuc-Yo-8Dm"/>
-                                        </constraints>
                                         <size key="customSize" width="293" height="252"/>
-                                        <connections>
-                                            <outlet property="imageView" destination="nWj-2n-t26" id="Cg3-Ge-W0y"/>
-                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -55,9 +47,15 @@
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="u0t-C3-pkZ"/>
                                 </connections>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="squad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1K-As-qxO">
-                                <rect key="frame" x="238" y="101" width="125" height="49"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="squad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1K-As-qxO">
+                                <rect key="frame" x="239" y="117" width="123" height="51"/>
+                                <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="45"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team Page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCg-rB-foZ">
+                                <rect key="frame" x="233" y="169" width="134" height="31"/>
+                                <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="27"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -65,7 +63,12 @@
                         <color key="backgroundColor" red="0.42352941176470588" green="0.0" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Hvt-U3-JpS" firstAttribute="bottom" secondItem="tsR-hK-woN" secondAttribute="bottomMargin" id="BZI-6R-Fka"/>
+                            <constraint firstAttribute="centerX" secondItem="M1K-As-qxO" secondAttribute="centerX" constant="-0.5" id="Gv4-B2-UHk"/>
+                            <constraint firstItem="cCg-rB-foZ" firstAttribute="top" secondItem="M1K-As-qxO" secondAttribute="bottom" constant="1" id="IFC-MP-7Tg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Hvt-U3-JpS" secondAttribute="trailing" constant="-16" id="Lgz-FM-fLg"/>
+                            <constraint firstItem="M1K-As-qxO" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="97" id="MsY-bd-BUO"/>
+                            <constraint firstItem="cCg-rB-foZ" firstAttribute="top" secondItem="M1K-As-qxO" secondAttribute="bottom" constant="1" id="Oml-xC-nRq"/>
+                            <constraint firstAttribute="centerX" secondItem="cCg-rB-foZ" secondAttribute="centerX" constant="-0.5" id="WWv-9v-6UW"/>
                             <constraint firstItem="Hvt-U3-JpS" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-16" id="sjn-oh-yWe"/>
                         </constraints>
                     </view>
@@ -77,6 +80,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="YdS-cr-lKf">
+            <objects>
+                <viewController id="BFt-U9-Ytf" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4EJ-kc-Ltv"/>
+                        <viewControllerLayoutGuide type="bottom" id="iwN-q6-1wH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="d7b-tF-jve">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.92549019610000005" green="0.55294117649999996" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ROF-yg-IR2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1411" y="-176"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">

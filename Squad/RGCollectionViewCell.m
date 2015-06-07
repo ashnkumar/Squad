@@ -9,10 +9,10 @@
 #import "RGCollectionViewCell.h"
 
 @implementation RGCollectionViewCell
+
 - (void)awakeFromNib
 {
-    self.imageView.contentMode = UIViewContentModeScaleAspectFill;
     self.layer.cornerRadius = 10;
-
 }
+
 @end

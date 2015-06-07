@@ -11,11 +11,13 @@
 #import "TeamScreenViewController.h"
 
 #import "RGCollectionViewCell.h"
+#import "AppConstants.h"
 
 @interface TeamScreenViewController ()
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong, nonatomic) NSMutableArray *teamMembersList;
+@property (strong, nonatomic) NSDictionary *colorMappingDic;
 
 @end
 
@@ -23,14 +25,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-//    self.teamMembersList = [@[@"AshwinCard",
-//                              @"CatCard",
-//                              @"JustinCard",
-//                              @"XanderCard"] mutableCopy];
-    
-    self.teamMembersList = [@[@"climb",@"ice",@"lake",@"shark",@"whale",@"climb",@"ice",@"lake",@"shark",@"whale",@"climb",@"ice",@"lake",@"shark",@"whale"]mutableCopy];
-    
+
+    self.teamMembersList = [@[@"lightBlue", @"orange", @"teal", @"pink", @"gold"] mutableCopy];
+
+    self.colorMappingDic = @{@"lightBlue": [AppConstants AKLightBlueColor],
+                             @"orange": [AppConstants AKOrangeColor],
+                             @"teal": [AppConstants AKTealColor],
+                             @"pink": [AppConstants AKPinkColor],
+                             @"gold": [AppConstants AKGoldColor] };
     
 }
 
@@ -58,7 +60,7 @@
 - (void)configureCell:(RGCollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *nameOfImage = self.teamMembersList[indexPath.section];
-    cell.imageView.image = [UIImage imageNamed:nameOfImage];
+    cell.backgroundColor = (UIColor *)self.colorMappingDic[nameOfImage];
 }
 
 @end

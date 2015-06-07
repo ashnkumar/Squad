@@ -27,7 +27,7 @@
 
 - (void)setupLayout
 {
-    self.itemSize = CGSizeMake(self.collectionView.bounds.size.width /2.7, self.collectionView.bounds.size.height/1.5);
+    self.itemSize = CGSizeMake(self.collectionView.bounds.size.width /3.0, self.collectionView.bounds.size.height/1.5);
     _visibleRectWidth = self.collectionView.bounds.size.width;
     self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     self.collectionView.pagingEnabled  = NO;
@@ -50,18 +50,16 @@
             CGFloat distance =  self.collectionView.contentOffset.x + (1/2.0 * _visibleRectWidth);
             CGFloat computedOffset = cardX  - distance;
             
-            CGFloat fractionComputedOffset = computedOffset /(attributes.bounds.size.width /17.0);
+            CGFloat fractionComputedOffset = computedOffset /(attributes.bounds.size.width /77.0);
             CGFloat fraction = computedOffset/ attributes.bounds.size.width;
             
             fraction = [self allowedRadian:fraction];
             CGFloat offset = fabsf((fractionComputedOffset)* (1 - fabsf(cosf(fraction))));
             CGFloat yComputedOffset = collectionViewHeight + offset;
-            attributes.center = CGPointMake(attributes.center.x, yComputedOffset + 0.4*(collectionViewHeight));
+            attributes.center = CGPointMake(attributes.center.x, yComputedOffset + 0.2*(collectionViewHeight));
             
             //transform
             attributes.transform3D  = [self transformFromFraction:fraction];
-            
-            
             
         }
     }
