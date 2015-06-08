@@ -7,7 +7,7 @@
 //
 
 #define REUSE_ID @"collectionViewReuse"
-const double INITIAL_SCROLL_OFFSET = 36.0;
+const double INITIAL_SCROLL_OFFSET = 40.0;
 const double ENDING_SCROLL_OFFSET = 640.0;
 
 #import "TeamScreenViewController.h"
@@ -59,7 +59,7 @@ const double ENDING_SCROLL_OFFSET = 640.0;
     // Set up card animations
     self.centerCardPoint = CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height-100);
     self.centerCardIndexPath = [[NSIndexPath alloc] init];
-//    [self.collectionView setContentOffset:CGPointMake(-113.9, 9)];
+
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -141,11 +141,13 @@ const double ENDING_SCROLL_OFFSET = 640.0;
     NSLog(@"Did end decelearting");
     NSLog(@"Offset is: %@", NSStringFromCGPoint(self.collectionView.contentOffset));
     
+    [self moveToRightPosition];
     [self calculateCenterIndex];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
+
     if (scrollView.contentOffset.x < INITIAL_SCROLL_OFFSET) {
         CGPoint offset = scrollView.contentOffset;
         offset.x = INITIAL_SCROLL_OFFSET;
@@ -157,10 +159,16 @@ const double ENDING_SCROLL_OFFSET = 640.0;
         offset.x = ENDING_SCROLL_OFFSET;
         scrollView.contentOffset = offset;
     }
+    
+    else {
+
+        
+    }
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
+    [self moveToRightPosition];
     NSLog(@"didEndDragging");
     NSLog(@"Offset is: %@", NSStringFromCGPoint(self.collectionView.contentOffset));
 }
@@ -192,6 +200,31 @@ const double ENDING_SCROLL_OFFSET = 640.0;
     self.centerCardIndexPath = [self.collectionView
                                 indexPathForItemAtPoint:[self.view convertPoint:self.centerCardPoint
                                                                          toView:self.collectionView]];
+}
+
+- (void)moveToRightPosition
+{
+    int necessaryMultiple = [self calculateNecessaryOffsetMultiple];
+    //  @TODO: GENERICIZE:
+    CGFloat cardWidth = 150.0;
+    CGFloat necessaryOffset = INITIAL_SCROLL_OFFSET + (necessaryMultiple * cardWidth);
+    [UIView animateWithDuration:0.2 animations:^{
+        [self.collectionView setContentOffset:CGPointMake(necessaryOffset, 0.0) animated:YES];
+    }];
+    
+    
+}
+
+- (int)calculateNecessaryOffsetMultiple
+{
+    CGPoint currentOffset = self.collectionView.contentOffset;
+    
+//  @TODO: GENERICIZE:
+    CGFloat cardWidth = 150.0;
+
+    CGFloat currentOffsetNormalized = currentOffset.x - INITIAL_SCROLL_OFFSET;
+    int roundedOffset = lroundf(currentOffsetNormalized/cardWidth);
+    return roundedOffset;
 }
 
 @end
