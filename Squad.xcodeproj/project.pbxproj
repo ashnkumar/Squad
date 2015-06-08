@@ -12,7 +12,6 @@
 		425D54971B2256950069FF61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 425D54961B2256950069FF61 /* main.m */; };
 		425D549A1B2256950069FF61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 425D54991B2256950069FF61 /* AppDelegate.m */; };
 		425D549D1B2256950069FF61 /* TeamScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 425D549C1B2256950069FF61 /* TeamScreenViewController.m */; };
-		425D54A01B2256950069FF61 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 425D549F1B2256950069FF61 /* SecondViewController.m */; };
 		425D54A31B2256950069FF61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 425D54A11B2256950069FF61 /* Main.storyboard */; };
 		425D54A51B2256950069FF61 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 425D54A41B2256950069FF61 /* Images.xcassets */; };
 		425D54A81B2256950069FF61 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 425D54A61B2256950069FF61 /* LaunchScreen.xib */; };
@@ -21,6 +20,11 @@
 		425D54CA1B22680E0069FF61 /* RGCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 425D54C81B22680E0069FF61 /* RGCollectionViewCell.m */; };
 		425D54CD1B226D2A0069FF61 /* Ubuntu-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 425D54CC1B226D000069FF61 /* Ubuntu-Regular.ttf */; };
 		425D54D01B23C9B20069FF61 /* AppConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 425D54CF1B23C9B20069FF61 /* AppConstants.m */; };
+		428379EC1B2544E2001CF574 /* RankingScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 428379EB1B2544E2001CF574 /* RankingScreenViewController.m */; };
+		428379EE1B2551B6001CF574 /* Ubuntu-C.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 428379ED1B255196001CF574 /* Ubuntu-C.ttf */; };
+		428379F11B255463001CF574 /* RankingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 428379F01B255463001CF574 /* RankingTableViewCell.m */; };
+		428379F51B255CAD001CF574 /* HVTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 428379F41B255CAD001CF574 /* HVTableView.m */; };
+		428379F71B256160001CF574 /* Ubuntu-L.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 428379F61B25615A001CF574 /* Ubuntu-L.ttf */; };
 		697BF01C5D939F5E2C5E773F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B56D4867292F4F4E68D05083 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -46,8 +50,6 @@
 		425D54991B2256950069FF61 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		425D549B1B2256950069FF61 /* TeamScreenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeamScreenViewController.h; sourceTree = "<group>"; };
 		425D549C1B2256950069FF61 /* TeamScreenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeamScreenViewController.m; sourceTree = "<group>"; };
-		425D549E1B2256950069FF61 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		425D549F1B2256950069FF61 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		425D54A21B2256950069FF61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		425D54A41B2256950069FF61 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		425D54A71B2256950069FF61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -61,6 +63,14 @@
 		425D54CC1B226D000069FF61 /* Ubuntu-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Regular.ttf"; sourceTree = "<group>"; };
 		425D54CE1B23C9B20069FF61 /* AppConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppConstants.h; path = Resources/AppConstants.h; sourceTree = "<group>"; };
 		425D54CF1B23C9B20069FF61 /* AppConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppConstants.m; path = Resources/AppConstants.m; sourceTree = "<group>"; };
+		428379EA1B2544E2001CF574 /* RankingScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RankingScreenViewController.h; path = "Ranking Screen/RankingScreenViewController.h"; sourceTree = "<group>"; };
+		428379EB1B2544E2001CF574 /* RankingScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RankingScreenViewController.m; path = "Ranking Screen/RankingScreenViewController.m"; sourceTree = "<group>"; };
+		428379ED1B255196001CF574 /* Ubuntu-C.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-C.ttf"; sourceTree = "<group>"; };
+		428379EF1B255463001CF574 /* RankingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RankingTableViewCell.h; path = "Ranking Screen/RankingTableViewCell.h"; sourceTree = "<group>"; };
+		428379F01B255463001CF574 /* RankingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RankingTableViewCell.m; path = "Ranking Screen/RankingTableViewCell.m"; sourceTree = "<group>"; };
+		428379F31B255CAD001CF574 /* HVTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVTableView.h; sourceTree = "<group>"; };
+		428379F41B255CAD001CF574 /* HVTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HVTableView.m; sourceTree = "<group>"; };
+		428379F61B25615A001CF574 /* Ubuntu-L.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-L.ttf"; sourceTree = "<group>"; };
 		B56D4867292F4F4E68D05083 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D24CC1498F348284CB857A38 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DADC4A3E965F103C0E1E18F0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -124,11 +134,10 @@
 		425D54931B2256950069FF61 /* Squad */ = {
 			isa = PBXGroup;
 			children = (
+				428379E91B2544CD001CF574 /* Ranking Screen */,
 				425D54BD1B2262070069FF61 /* Team Screen */,
 				425D54981B2256950069FF61 /* AppDelegate.h */,
 				425D54991B2256950069FF61 /* AppDelegate.m */,
-				425D549E1B2256950069FF61 /* SecondViewController.h */,
-				425D549F1B2256950069FF61 /* SecondViewController.m */,
 				425D54A11B2256950069FF61 /* Main.storyboard */,
 				425D54A41B2256950069FF61 /* Images.xcassets */,
 				425D54A61B2256950069FF61 /* LaunchScreen.xib */,
@@ -192,11 +201,34 @@
 		425D54CB1B226CBE0069FF61 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				428379F61B25615A001CF574 /* Ubuntu-L.ttf */,
+				428379ED1B255196001CF574 /* Ubuntu-C.ttf */,
 				425D54CC1B226D000069FF61 /* Ubuntu-Regular.ttf */,
 				425D54CE1B23C9B20069FF61 /* AppConstants.h */,
 				425D54CF1B23C9B20069FF61 /* AppConstants.m */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		428379E91B2544CD001CF574 /* Ranking Screen */ = {
+			isa = PBXGroup;
+			children = (
+				428379F21B255CA4001CF574 /* HVTableView */,
+				428379EA1B2544E2001CF574 /* RankingScreenViewController.h */,
+				428379EB1B2544E2001CF574 /* RankingScreenViewController.m */,
+				428379EF1B255463001CF574 /* RankingTableViewCell.h */,
+				428379F01B255463001CF574 /* RankingTableViewCell.m */,
+			);
+			name = "Ranking Screen";
+			sourceTree = "<group>";
+		};
+		428379F21B255CA4001CF574 /* HVTableView */ = {
+			isa = PBXGroup;
+			children = (
+				428379F31B255CAD001CF574 /* HVTableView.h */,
+				428379F41B255CAD001CF574 /* HVTableView.m */,
+			);
+			name = HVTableView;
 			sourceTree = "<group>";
 		};
 		BBF069C5C3934D92A037BB09 /* Frameworks */ = {
@@ -299,7 +331,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				428379F71B256160001CF574 /* Ubuntu-L.ttf in Resources */,
 				425D54CD1B226D2A0069FF61 /* Ubuntu-Regular.ttf in Resources */,
+				428379EE1B2551B6001CF574 /* Ubuntu-C.ttf in Resources */,
 				425D54A31B2256950069FF61 /* Main.storyboard in Resources */,
 				425D54A81B2256950069FF61 /* LaunchScreen.xib in Resources */,
 				425D54A51B2256950069FF61 /* Images.xcassets in Resources */,
@@ -353,11 +387,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				428379F11B255463001CF574 /* RankingTableViewCell.m in Sources */,
 				425D54C91B22680E0069FF61 /* RGPaperLayout.m in Sources */,
-				425D54A01B2256950069FF61 /* SecondViewController.m in Sources */,
 				425D54D01B23C9B20069FF61 /* AppConstants.m in Sources */,
+				428379F51B255CAD001CF574 /* HVTableView.m in Sources */,
 				425D549A1B2256950069FF61 /* AppDelegate.m in Sources */,
 				425D54CA1B22680E0069FF61 /* RGCollectionViewCell.m in Sources */,
+				428379EC1B2544E2001CF574 /* RankingScreenViewController.m in Sources */,
 				424D1EB51B23F169002509A9 /* TeamScreenDetailViewController.m in Sources */,
 				425D549D1B2256950069FF61 /* TeamScreenViewController.m in Sources */,
 				424D1EB11B23EFA0002509A9 /* CardAnimator.m in Sources */,

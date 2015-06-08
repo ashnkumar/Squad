@@ -18,5 +18,8 @@
 + (UIColor *)AKPinkColor;
 + (UIColor *)AKGoldColor;
 
+// App colors
++ (UIColor *)AKBaseGrayColor;
+
 
 @end

@@ -30,4 +30,8 @@
     return [UIColor colorWithRed:245/255.0 green: 166/255.0 blue:35/255.0 alpha:1.0f];
 }
 
++ (UIColor *)AKBaseGrayColor {
+    return [UIColor colorWithRed:57/255.0 green:57/255.0 blue:57/255.0 alpha:1.0];
+}
+
 @end
