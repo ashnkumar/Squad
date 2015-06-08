@@ -7,6 +7,8 @@
 //
 
 #define REUSE_ID @"collectionViewReuse"
+const double INITIAL_SCROLL_OFFSET = 36.0;
+const double ENDING_SCROLL_OFFSET = 640.0;
 
 #import "TeamScreenViewController.h"
 
@@ -44,9 +46,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.teamMembersList = [@[@"lightBlue", @"orange", @"teal", @"pink", @"gold"] mutableCopy];
+    self.teamMembersList = [@[@"clearColor", @"lightBlue", @"orange", @"teal", @"pink", @"gold", @"clearColor"] mutableCopy];
 
-    self.colorMappingDic = @{@"lightBlue": [AppConstants AKLightBlueColor],
+    self.colorMappingDic = @{@"clearColor": [UIColor clearColor],
+                             @"lightBlue": [AppConstants AKLightBlueColor],
                              @"orange": [AppConstants AKOrangeColor],
                              @"teal": [AppConstants AKTealColor],
                              @"pink": [AppConstants AKPinkColor],
@@ -56,16 +59,21 @@
     // Set up card animations
     self.centerCardPoint = CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height-100);
     self.centerCardIndexPath = [[NSIndexPath alloc] init];
+//    [self.collectionView setContentOffset:CGPointMake(-113.9, 9)];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    CGPoint currentOffset = self.collectionView.contentOffset;
+    if (currentOffset.x < INITIAL_SCROLL_OFFSET) {
+        [self.collectionView setContentOffset:CGPointMake(INITIAL_SCROLL_OFFSET, 0)];
+    }
 }
 
 - (IBAction)didTapPresentButton:(id)sender
 {
-    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    TeamScreenDetailViewController *tdvc = [mainStoryboard instantiateViewControllerWithIdentifier:@"TeamScreenDetailView"];
-    
-    tdvc.transitioningDelegate = self;
-    
-    [self presentViewController:tdvc animated:YES completion:nil];
+
 }
 
 #pragma mark - UICollectionView DataSource
@@ -130,17 +138,30 @@
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
+    NSLog(@"Did end decelearting");
+    NSLog(@"Offset is: %@", NSStringFromCGPoint(self.collectionView.contentOffset));
+    
     [self calculateCenterIndex];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    NSLog(@"Offset is: %@", NSStringFromCGPoint(self.collectionView.contentOffset));
+    if (scrollView.contentOffset.x < INITIAL_SCROLL_OFFSET) {
+        CGPoint offset = scrollView.contentOffset;
+        offset.x = INITIAL_SCROLL_OFFSET;
+        scrollView.contentOffset = offset;
+    }
+    
+    else if (scrollView.contentOffset.x > ENDING_SCROLL_OFFSET) {
+        CGPoint offset = scrollView.contentOffset;
+        offset.x = ENDING_SCROLL_OFFSET;
+        scrollView.contentOffset = offset;
+    }
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
-    NSLog(@"Scrolling ended");
+    NSLog(@"didEndDragging");
     NSLog(@"Offset is: %@", NSStringFromCGPoint(self.collectionView.contentOffset));
 }
 

@@ -27,7 +27,7 @@
 
 - (void)setupLayout
 {
-    self.itemSize = CGSizeMake(self.collectionView.bounds.size.width /3.0, self.collectionView.bounds.size.height/1.5);
+    self.itemSize = CGSizeMake(self.collectionView.bounds.size.width /2.5, self.collectionView.bounds.size.height/1.5);
     _visibleRectWidth = self.collectionView.bounds.size.width;
     self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     self.collectionView.pagingEnabled  = NO;
@@ -41,7 +41,7 @@
     CGRect visibleRect;
     visibleRect.origin = self.collectionView.contentOffset;
     visibleRect.size = self.collectionView.bounds.size;
-    CGFloat collectionViewHeight = self.collectionView.bounds.size.height/1.9;
+    CGFloat collectionViewHeight = self.collectionView.bounds.size.height/1.6;
     
     for (UICollectionViewLayoutAttributes *attributes in attribs) {
         if (CGRectIntersectsRect(attributes.frame, rect))
