@@ -12,20 +12,38 @@
 
 #import "RGCollectionViewCell.h"
 #import "AppConstants.h"
+#import "TeamScreenDetailViewController.h"
+#import "CardAnimator.h"
 
-@interface TeamScreenViewController ()
+@interface TeamScreenViewController () <UIViewControllerTransitioningDelegate, UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong, nonatomic) NSMutableArray *teamMembersList;
 @property (strong, nonatomic) NSDictionary *colorMappingDic;
 
+// Card animations
+@property (strong, nonatomic) CardAnimator *transition;
+@property (assign, nonatomic) CGRect cardOriginalFrame;
+@property (assign, nonatomic) CGPoint centerCardPoint;
+@property (assign, nonatomic) int currentCenterIndex;
+@property (strong, nonatomic) NSIndexPath *centerCardIndexPath;
+
 @end
 
 @implementation TeamScreenViewController
 
+// Ensures that the CardAnimator transition is available as soon as this VC
+// is loaded on the storyboard
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    if (self = [super initWithCoder:aDecoder]) {
+        _transition = [CardAnimator new];
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     self.teamMembersList = [@[@"lightBlue", @"orange", @"teal", @"pink", @"gold"] mutableCopy];
 
     self.colorMappingDic = @{@"lightBlue": [AppConstants AKLightBlueColor],
@@ -34,6 +52,20 @@
                              @"pink": [AppConstants AKPinkColor],
                              @"gold": [AppConstants AKGoldColor] };
     
+    
+    // Set up card animations
+    self.centerCardPoint = CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height-100);
+    self.centerCardIndexPath = [[NSIndexPath alloc] init];
+}
+
+- (IBAction)didTapPresentButton:(id)sender
+{
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    TeamScreenDetailViewController *tdvc = [mainStoryboard instantiateViewControllerWithIdentifier:@"TeamScreenDetailView"];
+    
+    tdvc.transitioningDelegate = self;
+    
+    [self presentViewController:tdvc animated:YES completion:nil];
 }
 
 #pragma mark - UICollectionView DataSource
@@ -63,4 +95,108 @@
     cell.backgroundColor = (UIColor *)self.colorMappingDic[nameOfImage];
 }
 
+#pragma mark - UICollectionView Delegate
+
+- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self calculateCenterIndex];
+
+    // Only the card in the center can be selected
+    if ([indexPath isEqual:self.centerCardIndexPath]) {
+        return YES;
+    }
+    else {
+        return NO;
+    }
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    RGCollectionViewCell *cell = (RGCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:indexPath];
+
+    // Find the original frame for the card (starting off point)
+    self.cardOriginalFrame = [self.collectionView convertRect:cell.frame
+                                                       toView:self.view];
+
+    // Make the detail view and present it when this card is selected
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    TeamScreenDetailViewController *tdvc = [mainStoryboard instantiateViewControllerWithIdentifier:@"TeamScreenDetailView"];
+    
+    tdvc.transitioningDelegate = self;
+    
+    [self presentViewController:tdvc animated:YES completion:nil];
+    
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    [self calculateCenterIndex];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    NSLog(@"Offset is: %@", NSStringFromCGPoint(self.collectionView.contentOffset));
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    NSLog(@"Scrolling ended");
+    NSLog(@"Offset is: %@", NSStringFromCGPoint(self.collectionView.contentOffset));
+}
+
+#pragma mark - UIViewControllerTransitioningDelegate
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented
+                                                                  presentingController:(UIViewController *)presenting
+                                                                      sourceController:(UIViewController *)source
+{
+    self.transition.originFrame = self.cardOriginalFrame;
+    self.transition.presenting = YES;
+
+    return self.transition;
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
+{
+    self.transition.originFrame = self.cardOriginalFrame;
+    self.transition.presenting = NO;
+    return self.transition;
+}
+
+#pragma mark - Helpers
+
+- (void)calculateCenterIndex
+{
+    // Find the indexpath for the card in the center, currently
+    self.centerCardIndexPath = [self.collectionView
+                                indexPathForItemAtPoint:[self.view convertPoint:self.centerCardPoint
+                                                                         toView:self.collectionView]];
+}
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -11,4 +11,8 @@
 
 @interface CardAnimator : NSObject <UIViewControllerAnimatedTransitioning>
 
+@property (nonatomic, assign) CGFloat duration;
+@property (nonatomic, assign) BOOL presenting;
+@property (nonatomic, assign) CGRect originFrame;
+
 @end

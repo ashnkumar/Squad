@@ -11,7 +11,6 @@
 @interface RGCollectionViewCell : UICollectionViewCell
 
 //@property (weak, nonatomic) IBOutlet UILabel *label;
-
 //@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 

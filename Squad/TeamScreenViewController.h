@@ -10,6 +10,5 @@
 
 @interface TeamScreenViewController : UIViewController
 
-
 @end
 
