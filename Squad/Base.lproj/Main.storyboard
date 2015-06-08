@@ -19,7 +19,7 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--First-->
+        <!--Team Screen View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="TeamScreenViewController" sceneMemberID="viewController">
@@ -103,7 +103,7 @@
                             <constraint firstItem="Hvt-U3-JpS" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-16" id="sjn-oh-yWe"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="" image="teamSelected" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="collectionView" destination="Hvt-U3-JpS" id="PyZ-6n-tdh"/>
                     </connections>
@@ -158,7 +158,7 @@
             </objects>
             <point key="canvasLocation" x="1411" y="-176"/>
         </scene>
-        <!--Second-->
+        <!--Ranking Screen View Controller-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="RankingScreenViewController" sceneMemberID="viewController">
@@ -262,7 +262,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="38a-ns-bB2" secondAttribute="trailing" constant="-16" id="yad-cb-Ngu"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="" image="trophySelected" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="rankingTableView" destination="38a-ns-bB2" id="iFR-oy-hbk"/>
                     </connections>
@@ -293,8 +293,8 @@
     </scenes>
     <resources>
         <image name="TeamScreenBackground" width="375" height="610"/>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
         <image name="tabBarBackground" width="375" height="57"/>
+        <image name="teamSelected" width="47" height="36"/>
+        <image name="trophySelected" width="32" height="31"/>
     </resources>
 </document>

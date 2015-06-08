@@ -32,6 +32,10 @@ const float STATS_MINI_HEADER_LABEL_FONT_SIZE = 15.0;
     self.rankingTableView.HVTableViewDelegate = self;
     self.rankingTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.rankingTableView.backgroundColor = [AppConstants AKBaseGrayColor];
+    
+    // Set the bar tint for when it is inactive
+    UITabBarItem *tabBarItem = self.tabBarItem;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -178,7 +182,6 @@ const float STATS_MINI_HEADER_LABEL_FONT_SIZE = 15.0;
     collapseCell:(UITableViewCell*)cell
    withIndexPath:(NSIndexPath*)indexPath
 {
-    NSLog(@"Collapsing cell at indexPath: %d", indexPath.row);
     
     if ([cell.contentView subviews]){
         for (UIView *subview in [cell.contentView subviews]) {

@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "AppConstants.h"
+
 @interface AppDelegate ()
 
 @end
@@ -23,6 +25,8 @@
 //            NSLog(@"%@", fontName);
 //        }
 //    }
+    
+    [[UITabBar appearance] setTintColor:[AppConstants AKOrangeTextColor]];
     return YES;
 }
 
