@@ -20,6 +20,8 @@
 
 // App colors
 + (UIColor *)AKBaseGrayColor;
++ (UIColor *)AKGrayTextColor;
++ (UIColor *)AKOrangeTextColor;
 
 
 @end

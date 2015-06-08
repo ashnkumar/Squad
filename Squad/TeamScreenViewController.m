@@ -159,11 +159,6 @@ const double ENDING_SCROLL_OFFSET = 640.0;
         offset.x = ENDING_SCROLL_OFFSET;
         scrollView.contentOffset = offset;
     }
-    
-    else {
-
-        
-    }
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate

@@ -46,7 +46,7 @@
 	<array>
 		<string>Ubuntu-Regular.ttf</string>
 		<string>Ubuntu-C.ttf</string>
-		<string>Ubuntu-L.tff</string>
+		<string>Ubuntu-Light.tff</string>
 	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>

@@ -34,4 +34,12 @@
     return [UIColor colorWithRed:57/255.0 green:57/255.0 blue:57/255.0 alpha:1.0];
 }
 
++ (UIColor *)AKGrayTextColor {
+    return [UIColor colorWithRed:227/255.0 green:227/255.0 blue:227/255.0 alpha:1.0];
+}
+
++ (UIColor *)AKOrangeTextColor {
+    return [UIColor colorWithRed:255/255.0 green:101/255.0 blue:0/255.0 alpha:1.0];
+}
+
 @end
