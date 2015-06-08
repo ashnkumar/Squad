@@ -178,7 +178,15 @@ const float STATS_MINI_HEADER_LABEL_FONT_SIZE = 15.0;
     collapseCell:(UITableViewCell*)cell
    withIndexPath:(NSIndexPath*)indexPath
 {
+    NSLog(@"Collapsing cell at indexPath: %d", indexPath.row);
     
+    if ([cell.contentView subviews]){
+        for (UIView *subview in [cell.contentView subviews]) {
+            if (!subview.tag) {
+                [subview removeFromSuperview];
+            }
+        }
+    }
 }
 
 @end
