@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface GlucoseStatsScreenViewController : UIViewController
-
+@property (weak, nonatomic) IBOutlet UILabel *teamsCurrentGlucose;
 @end

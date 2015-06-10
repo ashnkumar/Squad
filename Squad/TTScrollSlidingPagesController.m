@@ -234,7 +234,7 @@
         UIView *topItem;
         if (title == nil){
             //do nothing, just empty view
-            NSLog(@"TTScrollSlidingPagesController Notice: An empty title object was returned in the titleForSlidingPagesViewController method of the datasource. Titles should be instances of TTSlidingPageTitle. An empty view is being put in it's place.");
+//            NSLog(@"TTScrollSlidingPagesController Notice: An empty title object was returned in the titleForSlidingPagesViewController method of the datasource. Titles should be instances of TTSlidingPageTitle. An empty view is being put in it's place.");
             topItem = [[UIView alloc] init];
         } else if (![title isKindOfClass:[TTSlidingPageTitle class]]){ //if someone has implemented the datasource wrong tell them
             [NSException raise:@"TTScrollSlidingPagesController Wrong Title Type" format:@"TTScrollSlidingPagesController: Titles should be instances of TTSlidingPageTitle, one was returned that wasn't a TTSlidingPageTitle. Did you implement the titleForSlidingPagesViewController method in the datasource correctly and with the right return type?"];

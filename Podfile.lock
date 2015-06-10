@@ -1,10 +1,13 @@
 PODS:
   - pop (1.0.7)
+  - UICountingLabel (1.2.0)
 
 DEPENDENCIES:
   - pop (~> 1.0)
+  - UICountingLabel
 
 SPEC CHECKSUMS:
   pop: 628ffc631644601567ee8bfaaaea493ebd7d0923
+  UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
 
 COCOAPODS: 0.37.0
