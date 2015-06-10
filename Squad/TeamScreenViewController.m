@@ -24,6 +24,7 @@ const double ENDING_SCROLL_OFFSET = 640.0;
 #import "GlucoseStatsScreenViewController.h"
 #import "StepsStatsScreenViewController.h"
 #import "DDPageControl.h"
+#import "GlucoseStatsScreenViewController.h"
 
 @interface TeamScreenViewController () <UIViewControllerTransitioningDelegate, UICollectionViewDataSource, UICollectionViewDelegate, TTSliddingPageDelegate, TTSlidingPagesDataSource>
 
@@ -106,7 +107,7 @@ const double ENDING_SCROLL_OFFSET = 640.0;
     
     self.slider.dataSource = self;
     self.slider.delegate = self;
-    self.slider.initialPageNumber = 2;
+    self.slider.initialPageNumber = 0;
     self.slider.view.frame = CGRectMake(0, 100, self.view.frame.size.width, 350);
     NSLog(@"My frame size width is: %@", NSStringFromCGSize(self.view.frame.size));
     [self.view addSubview:self.slider.view];
@@ -265,6 +266,12 @@ const double ENDING_SCROLL_OFFSET = 640.0;
 -(void)didScrollToViewAtIndex:(NSUInteger)index
 {
     self.myPageControl.currentPage = index;
+    
+    if (index == 2) {
+        // Glucose screen
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"GlucoseStatsCountup"
+                                                            object:self];
+    }
 }
 
 

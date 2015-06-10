@@ -17,11 +17,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.teamsCurrentGlucose.format = @"%d";
+    self.teamsCurrentGlucose.method = UILabelCountingMethodEaseInOut;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(startGlucoseStatsCounting:) name:@"GlucoseStatsCountup"
+                                               object:nil];
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)startGlucoseStatsCounting:(NSNotification *)notification
+{
+    [self.teamsCurrentGlucose countFrom:0 to:140 withDuration:1.5f];
 }
 
 /*
