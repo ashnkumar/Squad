@@ -23,6 +23,7 @@ const double ENDING_SCROLL_OFFSET = 640.0;
 #import "CaloriesStatsScreenViewController.h"
 #import "GlucoseStatsScreenViewController.h"
 #import "StepsStatsScreenViewController.h"
+#import "DDPageControl.h"
 
 @interface TeamScreenViewController () <UIViewControllerTransitioningDelegate, UICollectionViewDataSource, UICollectionViewDelegate, TTSliddingPageDelegate, TTSlidingPagesDataSource>
 
@@ -40,6 +41,8 @@ const double ENDING_SCROLL_OFFSET = 640.0;
 
 // Sliding VC
 @property (strong, nonatomic) TTScrollSlidingPagesController *slider;
+//@property (weak, nonatomic) IBOutlet UIPageControl *myPageControl;
+@property (weak, nonatomic) IBOutlet UIPageControl *myPageControl;
 
 @end
 
@@ -99,12 +102,19 @@ const double ENDING_SCROLL_OFFSET = 640.0;
     // https://github.com/TomThorpe/UIScrollSlidingPages
     self.slider.titleScrollerHidden = YES;
     self.slider.zoomOutAnimationDisabled = YES;
+    self.slider.disableUIPageControl = YES;
     
     self.slider.dataSource = self;
     self.slider.delegate = self;
-    self.slider.view.frame = CGRectMake(100, 100, 200, 200);
+    self.slider.initialPageNumber = 2;
+    self.slider.view.frame = CGRectMake(0, 100, self.view.frame.size.width, 350);
+    NSLog(@"My frame size width is: %@", NSStringFromCGSize(self.view.frame.size));
     [self.view addSubview:self.slider.view];
     [self addChildViewController:self.slider];
+    
+    // Add the page control
+    self.myPageControl.numberOfPages = 3;
+    self.myPageControl.currentPageIndicatorTintColor = [AppConstants AKOrangeTextColor];
 }
 
 #pragma mark - UICollectionView DataSource
@@ -254,7 +264,7 @@ const double ENDING_SCROLL_OFFSET = 640.0;
 
 -(void)didScrollToViewAtIndex:(NSUInteger)index
 {
-    NSLog(@"scrolled to view");
+    self.myPageControl.currentPage = index;
 }
 
 

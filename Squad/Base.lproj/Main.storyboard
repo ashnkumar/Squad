@@ -55,21 +55,31 @@
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="u0t-C3-pkZ"/>
                                 </connections>
                             </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="pNK-Af-cAJ">
+                                <rect key="frame" x="227" y="344" width="147" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="147" id="X2M-Jh-sy2"/>
+                                    <constraint firstAttribute="height" constant="37" id="rbn-4M-3AC"/>
+                                </constraints>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" red="0.42352941176470588" green="0.0" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="2SX-mq-FXr" secondAttribute="bottom" id="1Fr-TM-ewY"/>
+                            <constraint firstAttribute="centerX" secondItem="pNK-Af-cAJ" secondAttribute="centerX" id="2hU-W0-tlj"/>
                             <constraint firstItem="Hvt-U3-JpS" firstAttribute="bottom" secondItem="tsR-hK-woN" secondAttribute="bottomMargin" id="BZI-6R-Fka"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Hvt-U3-JpS" secondAttribute="trailing" constant="-16" id="Lgz-FM-fLg"/>
                             <constraint firstItem="2SX-mq-FXr" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-16" id="Oac-jw-u7h"/>
                             <constraint firstItem="2SX-mq-FXr" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" id="fBD-Ov-7be"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2SX-mq-FXr" secondAttribute="trailing" constant="-16" id="m94-tw-qGw"/>
                             <constraint firstItem="Hvt-U3-JpS" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-16" id="sjn-oh-yWe"/>
+                            <constraint firstItem="Hvt-U3-JpS" firstAttribute="top" secondItem="pNK-Af-cAJ" secondAttribute="bottom" constant="-80" id="xOS-Pa-VxM"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="teamSelected" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="collectionView" destination="Hvt-U3-JpS" id="PyZ-6n-tdh"/>
+                        <outlet property="myPageControl" destination="pNK-Af-cAJ" id="ejg-lk-Mvz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>

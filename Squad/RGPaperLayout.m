@@ -50,7 +50,7 @@
             CGFloat distance =  self.collectionView.contentOffset.x + (1/2.0 * _visibleRectWidth);
             CGFloat computedOffset = cardX  - distance;
             
-            CGFloat fractionComputedOffset = computedOffset /(attributes.bounds.size.width /77.0);
+            CGFloat fractionComputedOffset = computedOffset /(attributes.bounds.size.width /107.0);
             CGFloat fraction = computedOffset/ attributes.bounds.size.width;
             
             fraction = [self allowedRadian:fraction];
