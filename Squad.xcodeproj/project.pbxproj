@@ -25,6 +25,22 @@
 		428379F11B255463001CF574 /* RankingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 428379F01B255463001CF574 /* RankingTableViewCell.m */; };
 		428379F51B255CAD001CF574 /* HVTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 428379F41B255CAD001CF574 /* HVTableView.m */; };
 		428379F71B256160001CF574 /* Ubuntu-L.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 428379F61B25615A001CF574 /* Ubuntu-L.ttf */; };
+		42837A021B26440A001CF574 /* UIProgressLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 428379FF1B26440A001CF574 /* UIProgressLabel.m */; };
+		42837A031B26440A001CF574 /* VAProgressCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 42837A011B26440A001CF574 /* VAProgressCircle.m */; };
+		42F0EF171B27DD5D00F48CE4 /* diagmonds.png in Resources */ = {isa = PBXBuildFile; fileRef = 42F0EF081B27DD5D00F48CE4 /* diagmonds.png */; };
+		42F0EF181B27DD5D00F48CE4 /* diagmonds_@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 42F0EF091B27DD5D00F48CE4 /* diagmonds_@2X.png */; };
+		42F0EF191B27DD5D00F48CE4 /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 42F0EF0A1B27DD5D00F48CE4 /* readme.txt */; };
+		42F0EF1A1B27DD5D00F48CE4 /* TTScrollSlidingPagesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F0EF0C1B27DD5D00F48CE4 /* TTScrollSlidingPagesController.m */; };
+		42F0EF1B1B27DD5D00F48CE4 /* TTSlidingPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F0EF0E1B27DD5D00F48CE4 /* TTSlidingPage.m */; };
+		42F0EF1C1B27DD5D00F48CE4 /* TTSlidingPageTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F0EF101B27DD5D00F48CE4 /* TTSlidingPageTitle.m */; };
+		42F0EF1D1B27DD5D00F48CE4 /* TTBlackTriangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F0EF131B27DD5D00F48CE4 /* TTBlackTriangle.m */; };
+		42F0EF1E1B27DD5D00F48CE4 /* TTScrollViewWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F0EF151B27DD5D00F48CE4 /* TTScrollViewWrapper.m */; };
+		42F0EF251B27E03C00F48CE4 /* StepsStatsScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F0EF241B27E03C00F48CE4 /* StepsStatsScreenViewController.m */; };
+		42F0EF281B27E05300F48CE4 /* GlucoseStatsScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F0EF271B27E05300F48CE4 /* GlucoseStatsScreenViewController.m */; };
+		42F0EF2B1B27E06A00F48CE4 /* CaloriesStatsScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F0EF2A1B27E06A00F48CE4 /* CaloriesStatsScreenViewController.m */; };
+		42F0EF2D1B27E09B00F48CE4 /* StepsStatsScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42F0EF2C1B27E09B00F48CE4 /* StepsStatsScreenView.xib */; };
+		42F0EF2F1B27E0A700F48CE4 /* GlucoseStatsScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42F0EF2E1B27E0A700F48CE4 /* GlucoseStatsScreenView.xib */; };
+		42F0EF311B27E0B300F48CE4 /* CaloriesStatsScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42F0EF301B27E0B300F48CE4 /* CaloriesStatsScreenView.xib */; };
 		697BF01C5D939F5E2C5E773F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B56D4867292F4F4E68D05083 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +87,34 @@
 		428379F31B255CAD001CF574 /* HVTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVTableView.h; sourceTree = "<group>"; };
 		428379F41B255CAD001CF574 /* HVTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HVTableView.m; sourceTree = "<group>"; };
 		428379F61B25615A001CF574 /* Ubuntu-L.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-L.ttf"; sourceTree = "<group>"; };
+		428379FE1B26440A001CF574 /* UIProgressLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIProgressLabel.h; sourceTree = "<group>"; };
+		428379FF1B26440A001CF574 /* UIProgressLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIProgressLabel.m; sourceTree = "<group>"; };
+		42837A001B26440A001CF574 /* VAProgressCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VAProgressCircle.h; sourceTree = "<group>"; };
+		42837A011B26440A001CF574 /* VAProgressCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VAProgressCircle.m; sourceTree = "<group>"; };
+		42F0EF081B27DD5D00F48CE4 /* diagmonds.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diagmonds.png; sourceTree = "<group>"; };
+		42F0EF091B27DD5D00F48CE4 /* diagmonds_@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "diagmonds_@2X.png"; sourceTree = "<group>"; };
+		42F0EF0A1B27DD5D00F48CE4 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
+		42F0EF0B1B27DD5D00F48CE4 /* TTScrollSlidingPagesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTScrollSlidingPagesController.h; sourceTree = "<group>"; };
+		42F0EF0C1B27DD5D00F48CE4 /* TTScrollSlidingPagesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTScrollSlidingPagesController.m; sourceTree = "<group>"; };
+		42F0EF0D1B27DD5D00F48CE4 /* TTSlidingPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTSlidingPage.h; sourceTree = "<group>"; };
+		42F0EF0E1B27DD5D00F48CE4 /* TTSlidingPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTSlidingPage.m; sourceTree = "<group>"; };
+		42F0EF0F1B27DD5D00F48CE4 /* TTSlidingPageTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTSlidingPageTitle.h; sourceTree = "<group>"; };
+		42F0EF101B27DD5D00F48CE4 /* TTSlidingPageTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTSlidingPageTitle.m; sourceTree = "<group>"; };
+		42F0EF111B27DD5D00F48CE4 /* TTSlidingPagesDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTSlidingPagesDataSource.h; sourceTree = "<group>"; };
+		42F0EF121B27DD5D00F48CE4 /* TTBlackTriangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTBlackTriangle.h; sourceTree = "<group>"; };
+		42F0EF131B27DD5D00F48CE4 /* TTBlackTriangle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBlackTriangle.m; sourceTree = "<group>"; };
+		42F0EF141B27DD5D00F48CE4 /* TTScrollViewWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTScrollViewWrapper.h; sourceTree = "<group>"; };
+		42F0EF151B27DD5D00F48CE4 /* TTScrollViewWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTScrollViewWrapper.m; sourceTree = "<group>"; };
+		42F0EF161B27DD5D00F48CE4 /* TTSliddingPageDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTSliddingPageDelegate.h; sourceTree = "<group>"; };
+		42F0EF231B27E03C00F48CE4 /* StepsStatsScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StepsStatsScreenViewController.h; path = "Team Screen/StepsStatsScreen/StepsStatsScreenViewController.h"; sourceTree = "<group>"; };
+		42F0EF241B27E03C00F48CE4 /* StepsStatsScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StepsStatsScreenViewController.m; path = "Team Screen/StepsStatsScreen/StepsStatsScreenViewController.m"; sourceTree = "<group>"; };
+		42F0EF261B27E05300F48CE4 /* GlucoseStatsScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GlucoseStatsScreenViewController.h; path = "Team Screen/GlucoseStatsScreen/GlucoseStatsScreenViewController.h"; sourceTree = "<group>"; };
+		42F0EF271B27E05300F48CE4 /* GlucoseStatsScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GlucoseStatsScreenViewController.m; path = "Team Screen/GlucoseStatsScreen/GlucoseStatsScreenViewController.m"; sourceTree = "<group>"; };
+		42F0EF291B27E06A00F48CE4 /* CaloriesStatsScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CaloriesStatsScreenViewController.h; path = "Team Screen/CaloriesStatsScreen/CaloriesStatsScreenViewController.h"; sourceTree = "<group>"; };
+		42F0EF2A1B27E06A00F48CE4 /* CaloriesStatsScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CaloriesStatsScreenViewController.m; path = "Team Screen/CaloriesStatsScreen/CaloriesStatsScreenViewController.m"; sourceTree = "<group>"; };
+		42F0EF2C1B27E09B00F48CE4 /* StepsStatsScreenView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StepsStatsScreenView.xib; path = "Team Screen/StepsStatsScreen/StepsStatsScreenView.xib"; sourceTree = "<group>"; };
+		42F0EF2E1B27E0A700F48CE4 /* GlucoseStatsScreenView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GlucoseStatsScreenView.xib; sourceTree = "<group>"; };
+		42F0EF301B27E0B300F48CE4 /* CaloriesStatsScreenView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CaloriesStatsScreenView.xib; sourceTree = "<group>"; };
 		B56D4867292F4F4E68D05083 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D24CC1498F348284CB857A38 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DADC4A3E965F103C0E1E18F0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -98,6 +142,8 @@
 		424D1EAE1B23EF79002509A9 /* Card Animations */ = {
 			isa = PBXGroup;
 			children = (
+				424D1EAF1B23EFA0002509A9 /* CardAnimator.h */,
+				424D1EB01B23EFA0002509A9 /* CardAnimator.m */,
 			);
 			name = "Card Animations";
 			sourceTree = "<group>";
@@ -176,13 +222,16 @@
 		425D54BD1B2262070069FF61 /* Team Screen */ = {
 			isa = PBXGroup;
 			children = (
+				42F0EF221B27E00200F48CE4 /* CaloriesStatsScreen */,
+				42F0EF211B27DFFB00F48CE4 /* GlucoseStatsScreen */,
+				42F0EF201B27DFE700F48CE4 /* StepsStatsScreen */,
+				42F0EF071B27DD3600F48CE4 /* ScrollingSliderView */,
+				425D54BE1B22621F0069FF61 /* RGCollectionView */,
+				428379FD1B2643F4001CF574 /* Progress Circle */,
 				424D1EB21B23F145002509A9 /* Detail Screen */,
 				424D1EAE1B23EF79002509A9 /* Card Animations */,
 				425D549B1B2256950069FF61 /* TeamScreenViewController.h */,
-				424D1EAF1B23EFA0002509A9 /* CardAnimator.h */,
-				424D1EB01B23EFA0002509A9 /* CardAnimator.m */,
 				425D549C1B2256950069FF61 /* TeamScreenViewController.m */,
-				425D54BE1B22621F0069FF61 /* RGCollectionView */,
 			);
 			name = "Team Screen";
 			sourceTree = "<group>";
@@ -229,6 +278,77 @@
 				428379F41B255CAD001CF574 /* HVTableView.m */,
 			);
 			name = HVTableView;
+			sourceTree = "<group>";
+		};
+		428379FD1B2643F4001CF574 /* Progress Circle */ = {
+			isa = PBXGroup;
+			children = (
+				428379FE1B26440A001CF574 /* UIProgressLabel.h */,
+				428379FF1B26440A001CF574 /* UIProgressLabel.m */,
+				42837A001B26440A001CF574 /* VAProgressCircle.h */,
+				42837A011B26440A001CF574 /* VAProgressCircle.m */,
+			);
+			name = "Progress Circle";
+			sourceTree = "<group>";
+		};
+		42F0EF071B27DD3600F48CE4 /* ScrollingSliderView */ = {
+			isa = PBXGroup;
+			children = (
+				42F0EF1F1B27DD6200F48CE4 /* TTSliding Source Code */,
+			);
+			name = ScrollingSliderView;
+			sourceTree = "<group>";
+		};
+		42F0EF1F1B27DD6200F48CE4 /* TTSliding Source Code */ = {
+			isa = PBXGroup;
+			children = (
+				42F0EF081B27DD5D00F48CE4 /* diagmonds.png */,
+				42F0EF091B27DD5D00F48CE4 /* diagmonds_@2X.png */,
+				42F0EF0A1B27DD5D00F48CE4 /* readme.txt */,
+				42F0EF0B1B27DD5D00F48CE4 /* TTScrollSlidingPagesController.h */,
+				42F0EF0C1B27DD5D00F48CE4 /* TTScrollSlidingPagesController.m */,
+				42F0EF0D1B27DD5D00F48CE4 /* TTSlidingPage.h */,
+				42F0EF0E1B27DD5D00F48CE4 /* TTSlidingPage.m */,
+				42F0EF0F1B27DD5D00F48CE4 /* TTSlidingPageTitle.h */,
+				42F0EF101B27DD5D00F48CE4 /* TTSlidingPageTitle.m */,
+				42F0EF111B27DD5D00F48CE4 /* TTSlidingPagesDataSource.h */,
+				42F0EF121B27DD5D00F48CE4 /* TTBlackTriangle.h */,
+				42F0EF131B27DD5D00F48CE4 /* TTBlackTriangle.m */,
+				42F0EF141B27DD5D00F48CE4 /* TTScrollViewWrapper.h */,
+				42F0EF151B27DD5D00F48CE4 /* TTScrollViewWrapper.m */,
+				42F0EF161B27DD5D00F48CE4 /* TTSliddingPageDelegate.h */,
+			);
+			name = "TTSliding Source Code";
+			sourceTree = "<group>";
+		};
+		42F0EF201B27DFE700F48CE4 /* StepsStatsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				42F0EF231B27E03C00F48CE4 /* StepsStatsScreenViewController.h */,
+				42F0EF241B27E03C00F48CE4 /* StepsStatsScreenViewController.m */,
+				42F0EF2C1B27E09B00F48CE4 /* StepsStatsScreenView.xib */,
+			);
+			name = StepsStatsScreen;
+			sourceTree = "<group>";
+		};
+		42F0EF211B27DFFB00F48CE4 /* GlucoseStatsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				42F0EF261B27E05300F48CE4 /* GlucoseStatsScreenViewController.h */,
+				42F0EF271B27E05300F48CE4 /* GlucoseStatsScreenViewController.m */,
+				42F0EF2E1B27E0A700F48CE4 /* GlucoseStatsScreenView.xib */,
+			);
+			name = GlucoseStatsScreen;
+			sourceTree = "<group>";
+		};
+		42F0EF221B27E00200F48CE4 /* CaloriesStatsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				42F0EF291B27E06A00F48CE4 /* CaloriesStatsScreenViewController.h */,
+				42F0EF2A1B27E06A00F48CE4 /* CaloriesStatsScreenViewController.m */,
+				42F0EF301B27E0B300F48CE4 /* CaloriesStatsScreenView.xib */,
+			);
+			name = CaloriesStatsScreen;
 			sourceTree = "<group>";
 		};
 		BBF069C5C3934D92A037BB09 /* Frameworks */ = {
@@ -334,9 +454,15 @@
 				428379F71B256160001CF574 /* Ubuntu-L.ttf in Resources */,
 				425D54CD1B226D2A0069FF61 /* Ubuntu-Regular.ttf in Resources */,
 				428379EE1B2551B6001CF574 /* Ubuntu-C.ttf in Resources */,
+				42F0EF181B27DD5D00F48CE4 /* diagmonds_@2X.png in Resources */,
+				42F0EF311B27E0B300F48CE4 /* CaloriesStatsScreenView.xib in Resources */,
+				42F0EF2D1B27E09B00F48CE4 /* StepsStatsScreenView.xib in Resources */,
 				425D54A31B2256950069FF61 /* Main.storyboard in Resources */,
+				42F0EF171B27DD5D00F48CE4 /* diagmonds.png in Resources */,
+				42F0EF191B27DD5D00F48CE4 /* readme.txt in Resources */,
 				425D54A81B2256950069FF61 /* LaunchScreen.xib in Resources */,
 				425D54A51B2256950069FF61 /* Images.xcassets in Resources */,
+				42F0EF2F1B27E0A700F48CE4 /* GlucoseStatsScreenView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,17 +513,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42F0EF1C1B27DD5D00F48CE4 /* TTSlidingPageTitle.m in Sources */,
 				428379F11B255463001CF574 /* RankingTableViewCell.m in Sources */,
 				425D54C91B22680E0069FF61 /* RGPaperLayout.m in Sources */,
+				42837A031B26440A001CF574 /* VAProgressCircle.m in Sources */,
 				425D54D01B23C9B20069FF61 /* AppConstants.m in Sources */,
 				428379F51B255CAD001CF574 /* HVTableView.m in Sources */,
 				425D549A1B2256950069FF61 /* AppDelegate.m in Sources */,
+				42F0EF1A1B27DD5D00F48CE4 /* TTScrollSlidingPagesController.m in Sources */,
 				425D54CA1B22680E0069FF61 /* RGCollectionViewCell.m in Sources */,
 				428379EC1B2544E2001CF574 /* RankingScreenViewController.m in Sources */,
+				42837A021B26440A001CF574 /* UIProgressLabel.m in Sources */,
+				42F0EF1B1B27DD5D00F48CE4 /* TTSlidingPage.m in Sources */,
 				424D1EB51B23F169002509A9 /* TeamScreenDetailViewController.m in Sources */,
+				42F0EF281B27E05300F48CE4 /* GlucoseStatsScreenViewController.m in Sources */,
+				42F0EF1E1B27DD5D00F48CE4 /* TTScrollViewWrapper.m in Sources */,
+				42F0EF2B1B27E06A00F48CE4 /* CaloriesStatsScreenViewController.m in Sources */,
+				42F0EF251B27E03C00F48CE4 /* StepsStatsScreenViewController.m in Sources */,
 				425D549D1B2256950069FF61 /* TeamScreenViewController.m in Sources */,
 				424D1EB11B23EFA0002509A9 /* CardAnimator.m in Sources */,
 				425D54971B2256950069FF61 /* main.m in Sources */,
+				42F0EF1D1B27DD5D00F48CE4 /* TTBlackTriangle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

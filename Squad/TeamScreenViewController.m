@@ -16,9 +16,17 @@ const double ENDING_SCROLL_OFFSET = 640.0;
 #import "AppConstants.h"
 #import "TeamScreenDetailViewController.h"
 #import "CardAnimator.h"
+#import "VAProgressCircle.h"
+#import "TTScrollSlidingPagesController.h"
+#import "TTSliddingPageDelegate.h"
+#import "TTSlidingPage.h"
+#import "CaloriesStatsScreenViewController.h"
+#import "GlucoseStatsScreenViewController.h"
+#import "StepsStatsScreenViewController.h"
 
-@interface TeamScreenViewController () <UIViewControllerTransitioningDelegate, UICollectionViewDataSource, UICollectionViewDelegate>
+@interface TeamScreenViewController () <UIViewControllerTransitioningDelegate, UICollectionViewDataSource, UICollectionViewDelegate, TTSliddingPageDelegate, TTSlidingPagesDataSource>
 
+// Cards
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong, nonatomic) NSMutableArray *teamMembersList;
 @property (strong, nonatomic) NSDictionary *colorMappingDic;
@@ -30,10 +38,15 @@ const double ENDING_SCROLL_OFFSET = 640.0;
 @property (assign, nonatomic) int currentCenterIndex;
 @property (strong, nonatomic) NSIndexPath *centerCardIndexPath;
 
+// Sliding VC
+@property (strong, nonatomic) TTScrollSlidingPagesController *slider;
+
 @end
 
 @implementation TeamScreenViewController
 
+
+#pragma mark - UIViewController Lifecycle
 // Ensures that the CardAnimator transition is available as soon as this VC
 // is loaded on the storyboard
 - (id)initWithCoder:(NSCoder *)aDecoder {
@@ -45,20 +58,10 @@ const double ENDING_SCROLL_OFFSET = 640.0;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.teamMembersList = [@[@"clearColor", @"lightBlue", @"orange", @"teal", @"pink", @"gold", @"clearColor"] mutableCopy];
 
-    self.colorMappingDic = @{@"clearColor": [UIColor clearColor],
-                             @"lightBlue": [AppConstants AKLightBlueColor],
-                             @"orange": [AppConstants AKOrangeColor],
-                             @"teal": [AppConstants AKTealColor],
-                             @"pink": [AppConstants AKPinkColor],
-                             @"gold": [AppConstants AKGoldColor] };
-    
-    
-    // Set up card animations
-    self.centerCardPoint = CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height-100);
-    self.centerCardIndexPath = [[NSIndexPath alloc] init];
+    [self setupCards];
+    [self setupCardAnimations];
+    [self setupSlider];
 
 }
 
@@ -71,9 +74,37 @@ const double ENDING_SCROLL_OFFSET = 640.0;
     }
 }
 
-- (IBAction)didTapPresentButton:(id)sender
+- (void)setupCards
 {
+    self.teamMembersList = [@[@"clearColor", @"lightBlue", @"orange", @"teal", @"pink", @"gold", @"clearColor"] mutableCopy];
+    
+    self.colorMappingDic = @{@"clearColor": [UIColor clearColor],
+                             @"lightBlue": [AppConstants AKLightBlueColor],
+                             @"orange": [AppConstants AKOrangeColor],
+                             @"teal": [AppConstants AKTealColor],
+                             @"pink": [AppConstants AKPinkColor],
+                             @"gold": [AppConstants AKGoldColor] };
+}
 
+- (void)setupCardAnimations
+{
+    self.centerCardPoint = CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height-100);
+    self.centerCardIndexPath = [[NSIndexPath alloc] init];
+}
+
+- (void)setupSlider
+{
+    self.slider = [[TTScrollSlidingPagesController alloc] init];
+
+    // https://github.com/TomThorpe/UIScrollSlidingPages
+    self.slider.titleScrollerHidden = YES;
+    self.slider.zoomOutAnimationDisabled = YES;
+    
+    self.slider.dataSource = self;
+    self.slider.delegate = self;
+    self.slider.view.frame = CGRectMake(100, 100, 200, 200);
+    [self.view addSubview:self.slider.view];
+    [self addChildViewController:self.slider];
 }
 
 #pragma mark - UICollectionView DataSource
@@ -186,6 +217,46 @@ const double ENDING_SCROLL_OFFSET = 640.0;
     self.transition.presenting = NO;
     return self.transition;
 }
+
+
+#pragma mark - TTSlidingPagesDataSource
+
+-(int)numberOfPagesForSlidingPagesViewController:(TTScrollSlidingPagesController *)source{
+    return 3; //just return 7 pages as an example
+}
+
+-(TTSlidingPage *)pageForSlidingPagesViewController:(TTScrollSlidingPagesController*)source atIndex:(int)index{
+    
+    UIViewController *viewController;
+    
+    if (index == 0) {
+        viewController = [[StepsStatsScreenViewController alloc] init];
+    }
+    
+    else if (index == 1) {
+        viewController = [[CaloriesStatsScreenViewController alloc] init];
+    }
+    
+    else {
+        viewController = [[GlucoseStatsScreenViewController alloc] init];
+    }
+    
+    
+    return [[TTSlidingPage alloc] initWithContentViewController:viewController];
+}
+
+-(TTSlidingPageTitle *)titleForSlidingPagesViewController:(TTScrollSlidingPagesController *)source atIndex:(int)index{
+    TTSlidingPageTitle *title = nil;
+    return title;
+}
+
+#pragma mark - TTSlidingPagesDelegate
+
+-(void)didScrollToViewAtIndex:(NSUInteger)index
+{
+    NSLog(@"scrolled to view");
+}
+
 
 #pragma mark - Helpers
 
