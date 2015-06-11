@@ -147,6 +147,32 @@
             [_yChartLabels addObject:label];
         }
     }
+    
+//    if (_xChartLabels) {
+//        for (PNChartLabel * label in _xChartLabels) {
+//            [label removeFromSuperview];
+//        }
+//    }else{
+//        _xChartLabels = [NSMutableArray new];
+//    }
+//    
+//    NSString *labelText;
+//    
+//    if (_showLabel) {
+//        for (int index = 0; index < xLabels.count; index++) {
+//            labelText = xLabels[index];
+//            
+//            NSInteger x = 2 * _chartMargin +  (index * _xLabelWidth) - (_xLabelWidth / 2);
+//            NSInteger y = _chartMargin + _chartCavanHeight;
+//            
+//            PNChartLabel *label = [[PNChartLabel alloc] initWithFrame:CGRectMake(x, y, (NSInteger)_xLabelWidth, (NSInteger)_chartMargin)];
+//            [label setTextAlignment:NSTextAlignmentCenter];
+//            label.text = labelText;
+//            [self setCustomStyleForXLabel:label];
+//            [self addSubview:label];
+//            [_xChartLabels addObject:label];
+//        }
+//    }
 }
 
 - (CGFloat)computeEqualWidthForXLabels:(NSArray *)xLabels
