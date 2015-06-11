@@ -3,17 +3,56 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Ubuntu-C.ttf">
+            <string>UbuntuCondensed-Regular</string>
+            <string>UbuntuCondensed-Regular</string>
+        </mutableArray>
+        <mutableArray key="Ubuntu-L.ttf">
+            <string>Ubuntu-Light</string>
+        </mutableArray>
+        <mutableArray key="Ubuntu-M.ttf">
+            <string>Ubuntu-Medium</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StepsStatsScreenViewController">
             <connections>
+                <outlet property="groupStepsLabel" destination="B9e-LE-iVF" id="NCX-ir-V4e"/>
                 <outlet property="view" destination="iN0-l3-epB" id="R0z-d4-bVh"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="290"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="0.40997597575187683" green="0.73966354131698608" blue="0.60370302200317383" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="squad's total steps taken:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lqp-lG-0CC">
+                    <rect key="frame" x="74" y="29" width="226" height="23"/>
+                    <fontDescription key="fontDescription" name="Ubuntu-Light" family="Ubuntu" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="52,688" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9e-LE-iVF" customClass="UICountingLabel">
+                    <rect key="frame" x="95" y="53" width="185" height="44"/>
+                    <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="35"/>
+                    <color key="textColor" red="1" green="0.396078431372549" blue="0.0039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="goal:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Omb-Jx-qTR">
+                    <rect key="frame" x="168" y="134" width="38" height="21"/>
+                    <fontDescription key="fontDescription" name="UbuntuCondensed-Regular" family="Ubuntu Condensed" pointSize="13"/>
+                    <color key="textColor" red="1" green="0.30196078431372547" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="50,000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UyB-Du-ebX">
+                    <rect key="frame" x="168" y="153" width="38" height="21"/>
+                    <fontDescription key="fontDescription" name="UbuntuCondensed-Regular" family="Ubuntu Condensed" pointSize="13"/>
+                    <color key="textColor" red="1" green="0.30196078430000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>

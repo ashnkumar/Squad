@@ -9,6 +9,8 @@
 #import "VAProgressCircle.h"
 #import "UIProgressLabel.h"
 
+#import "AppConstants.h"
+
 #define DEGREES_TO_RADIANS(angle) ((angle) / 180.0 * M_PI)
 
 #define kName @"name"
@@ -116,19 +118,23 @@ typedef enum{
 {
     self.progressPieceView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width - self.backgroundCircle.lineWidth * 2, self.frame.size.height)];
     [self addSubview:self.progressPieceView];
+
     
-    self.numberView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width / 6, self.frame.size.height / 6)];
+    // AK: Changed this to my own divisor to manually alter the size of the circle
+    float ashwinsDivisor = 1.4;
+    
+    self.numberView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width / ashwinsDivisor, self.frame.size.height / ashwinsDivisor)];
     self.numberView.layer.cornerRadius = self.numberView.frame.size.width / 2;
     self.numberView.center = CGPointMake(self.center.x - self.frame.origin.x, self.center.y - self.frame.origin.y);
-    [self.numberView setBackgroundColor:[UIColor whiteColor]];
+    [self.numberView setBackgroundColor:[AppConstants AKGrayTextColor]];
     
-    self.numberLabel = [[UIProgressLabel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width / 6, self.frame.size.height / 6)];
+    self.numberLabel = [[UIProgressLabel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width / ashwinsDivisor, self.frame.size.height / ashwinsDivisor)];
     self.numberLabel.textAlignment = NSTextAlignmentCenter;
     self.numberLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:self.numberView.frame.size.width / 2];
     [self.numberLabel setText:[NSString stringWithFormat:@"%i", (int)self.total]];
     [self.numberLabel setTextColor:self.numberLabelColor];
     
-    [self.numberView addSubview:self.numberLabel];
+//    [self.numberView addSubview:self.numberLabel];
     [self addSubview:self.numberView];
 }
 
@@ -139,9 +145,9 @@ typedef enum{
     self.backgroundCircle = [CAShapeLayer layer];
     self.backgroundCircle.path = self.backgroundCirclePath.CGPath;
     self.backgroundCircle.lineCap = kCALineCapRound;
-    self.backgroundCircle.fillColor = [UIColor clearColor].CGColor;
+    self.backgroundCircle.fillColor = [UIColor colorWithRed:197/255.0 green:197/255.0 blue:197/255.0 alpha:1.0].CGColor;
     self.backgroundCircle.lineWidth = [[NSNumber numberWithInt:self.frame.size.width / 12] floatValue];
-    self.backgroundCircle.strokeColor = [UIColor whiteColor].CGColor;
+    self.backgroundCircle.strokeColor = [AppConstants AKGrayTextColor].CGColor;
     self.backgroundCircle.strokeEnd = 1.0;
     self.backgroundCircle.zPosition = -1;
     

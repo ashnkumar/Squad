@@ -41,7 +41,6 @@
 		42F0EF2D1B27E09B00F48CE4 /* StepsStatsScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42F0EF2C1B27E09B00F48CE4 /* StepsStatsScreenView.xib */; };
 		42F0EF2F1B27E0A700F48CE4 /* GlucoseStatsScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42F0EF2E1B27E0A700F48CE4 /* GlucoseStatsScreenView.xib */; };
 		42F0EF311B27E0B300F48CE4 /* CaloriesStatsScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42F0EF301B27E0B300F48CE4 /* CaloriesStatsScreenView.xib */; };
-		42F0EF351B27F42C00F48CE4 /* DDPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F0EF341B27F42C00F48CE4 /* DDPageControl.m */; };
 		42F0EF371B27FBCE00F48CE4 /* Ubuntu-M.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 42F0EF361B27FBC300F48CE4 /* Ubuntu-M.ttf */; };
 		697BF01C5D939F5E2C5E773F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B56D4867292F4F4E68D05083 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -117,8 +116,6 @@
 		42F0EF2C1B27E09B00F48CE4 /* StepsStatsScreenView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StepsStatsScreenView.xib; path = "Team Screen/StepsStatsScreen/StepsStatsScreenView.xib"; sourceTree = "<group>"; };
 		42F0EF2E1B27E0A700F48CE4 /* GlucoseStatsScreenView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GlucoseStatsScreenView.xib; sourceTree = "<group>"; };
 		42F0EF301B27E0B300F48CE4 /* CaloriesStatsScreenView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CaloriesStatsScreenView.xib; sourceTree = "<group>"; };
-		42F0EF331B27F42C00F48CE4 /* DDPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDPageControl.h; sourceTree = "<group>"; };
-		42F0EF341B27F42C00F48CE4 /* DDPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDPageControl.m; sourceTree = "<group>"; };
 		42F0EF361B27FBC300F48CE4 /* Ubuntu-M.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-M.ttf"; sourceTree = "<group>"; };
 		B56D4867292F4F4E68D05083 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D24CC1498F348284CB857A38 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -300,7 +297,6 @@
 		42F0EF071B27DD3600F48CE4 /* ScrollingSliderView */ = {
 			isa = PBXGroup;
 			children = (
-				42F0EF321B27F42300F48CE4 /* DDPageControl */,
 				42F0EF1F1B27DD6200F48CE4 /* TTSliding Source Code */,
 			);
 			name = ScrollingSliderView;
@@ -356,15 +352,6 @@
 				42F0EF301B27E0B300F48CE4 /* CaloriesStatsScreenView.xib */,
 			);
 			name = CaloriesStatsScreen;
-			sourceTree = "<group>";
-		};
-		42F0EF321B27F42300F48CE4 /* DDPageControl */ = {
-			isa = PBXGroup;
-			children = (
-				42F0EF331B27F42C00F48CE4 /* DDPageControl.h */,
-				42F0EF341B27F42C00F48CE4 /* DDPageControl.m */,
-			);
-			name = DDPageControl;
 			sourceTree = "<group>";
 		};
 		BBF069C5C3934D92A037BB09 /* Frameworks */ = {
@@ -536,7 +523,6 @@
 				42837A031B26440A001CF574 /* VAProgressCircle.m in Sources */,
 				425D54D01B23C9B20069FF61 /* AppConstants.m in Sources */,
 				428379F51B255CAD001CF574 /* HVTableView.m in Sources */,
-				42F0EF351B27F42C00F48CE4 /* DDPageControl.m in Sources */,
 				425D549A1B2256950069FF61 /* AppDelegate.m in Sources */,
 				42F0EF1A1B27DD5D00F48CE4 /* TTScrollSlidingPagesController.m in Sources */,
 				425D54CA1B22680E0069FF61 /* RGCollectionViewCell.m in Sources */,

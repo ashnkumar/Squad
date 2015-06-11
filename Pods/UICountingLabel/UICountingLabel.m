@@ -201,6 +201,7 @@
     }
     else if(self.formatBlock != nil)
     {
+        NSLog(@"The format block is: %@", self.formatBlock(value));
         self.text = self.formatBlock(value);
     }
     else
@@ -208,7 +209,12 @@
         // check if counting with ints - cast to int
         if([self.format rangeOfString:@"%(.*)d" options:NSRegularExpressionSearch].location != NSNotFound || [self.format rangeOfString:@"%(.*)i"].location != NSNotFound )
         {
-            self.text = [NSString stringWithFormat:self.format,(int)value];
+            NSNumberFormatter *formatter = [NSNumberFormatter new];
+            formatter.numberStyle = NSNumberFormatterDecimalStyle;
+            NSString *newString = [formatter stringFromNumber:[NSNumber numberWithInteger:value]];
+            
+//            self.text = [NSString stringWithFormat:self.format,(int)value];
+            self.text = newString;
         }
         else
         {
