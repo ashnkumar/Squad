@@ -6,6 +6,12 @@
 // project.
 
 
+// PNChart
+#define COCOAPODS_POD_AVAILABLE_PNChart
+#define COCOAPODS_VERSION_MAJOR_PNChart 0
+#define COCOAPODS_VERSION_MINOR_PNChart 8
+#define COCOAPODS_VERSION_PATCH_PNChart 3
+
 // UICountingLabel
 #define COCOAPODS_POD_AVAILABLE_UICountingLabel
 #define COCOAPODS_VERSION_MAJOR_UICountingLabel 1
