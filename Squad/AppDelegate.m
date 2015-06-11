@@ -27,6 +27,7 @@
 //    }
     
     [[UITabBar appearance] setTintColor:[AppConstants AKOrangeTextColor]];
+    
     return YES;
 }
 

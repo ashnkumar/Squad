@@ -91,7 +91,7 @@ const float STATS_MINI_HEADER_LABEL_FONT_SIZE = 15.0;
     cell.teamImageView.image = [UIImage imageNamed:@"teamPic"];
     
     // Gradient for the background
-    int baseColorRGB = 57;
+    int baseColorRGB = 140;
     int modifiedColor = baseColorRGB + (indexPath.row * 15);
     cell.contentView.backgroundColor = [UIColor colorWithRed:modifiedColor/255.0
                                                        green:modifiedColor/255.0
