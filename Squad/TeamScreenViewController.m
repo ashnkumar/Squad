@@ -30,8 +30,10 @@ const double ENDING_SCROLL_OFFSET = 640.0;
 
 // Cards
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-@property (strong, nonatomic) NSMutableArray *teamMembersList;
-@property (strong, nonatomic) NSDictionary *colorMappingDic;
+@property (strong, nonatomic) NSMutableArray *cardsList;
+@property (strong, nonatomic) NSDictionary *teamMembersList;
+@property (strong, nonatomic) NSDictionary *cardsMajorColorMappingDic;
+@property (strong, nonatomic) NSDictionary *cardsMinorColorMappingDic;
 
 // Card animations
 @property (strong, nonatomic) CardAnimator *transition;
@@ -42,7 +44,6 @@ const double ENDING_SCROLL_OFFSET = 640.0;
 
 // Sliding VC
 @property (strong, nonatomic) TTScrollSlidingPagesController *slider;
-//@property (weak, nonatomic) IBOutlet UIPageControl *myPageControl;
 @property (weak, nonatomic) IBOutlet UIPageControl *myPageControl;
 
 @end
@@ -80,14 +81,29 @@ const double ENDING_SCROLL_OFFSET = 640.0;
 
 - (void)setupCards
 {
-    self.teamMembersList = [@[@"clearColor", @"lightBlue", @"orange", @"teal", @"pink", @"gold", @"clearColor"] mutableCopy];
+    self.cardsList = [@[@"clearColor", @"orangeCard", @"blueCard", @"yellowCard", @"tealCard", @"purpleCard", @"clearColor"] mutableCopy];
     
-    self.colorMappingDic = @{@"clearColor": [UIColor clearColor],
-                             @"lightBlue": [AppConstants AKLightBlueColor],
-                             @"orange": [AppConstants AKOrangeColor],
-                             @"teal": [AppConstants AKTealColor],
-                             @"pink": [AppConstants AKPinkColor],
-                             @"gold": [AppConstants AKGoldColor] };
+    self.teamMembersList = @{@"0": @[@"", @""],
+                             @"1": @[@"Ashwin K.", @"-20 mg/dL"],
+                             @"2": @[@"Justin Y.", @"+650 calories"],
+                             @"3": @[@"Catherine J.", @"+565 steps"],
+                             @"4": @[@"Joe S.", @"+140 calories"],
+                             @"5": @[@"Xander P", @"+245 steps"],
+                             @"6": @[@"", @""]};
+    
+    self.cardsMinorColorMappingDic = @{@"clearColor": [UIColor clearColor],
+                             @"orangeCard": [AppConstants CardsDarkOrangeColor],
+                             @"blueCard": [AppConstants CardsDarkBlueColor],
+                             @"yellowCard": [AppConstants CardsDarkYellowColor],
+                             @"tealCard": [AppConstants CardsDarkTealColor],
+                             @"purpleCard": [AppConstants CardsDarkPurpleColor] };
+    
+    self.cardsMajorColorMappingDic = @{@"clearColor": [UIColor clearColor],
+                                       @"orangeCard": [AppConstants CardsLightOrangeColor],
+                                       @"blueCard": [AppConstants CardsLightBlueColor],
+                                       @"yellowCard": [AppConstants CardsLightYellowColor],
+                                       @"tealCard": [AppConstants CardsLightTealColor],
+                                       @"purpleCard": [AppConstants CardsLightPurpleColor] };
 }
 
 - (void)setupCardAnimations
@@ -115,14 +131,15 @@ const double ENDING_SCROLL_OFFSET = 640.0;
     
     // Add the page control
     self.myPageControl.numberOfPages = 3;
-    self.myPageControl.currentPageIndicatorTintColor = [AppConstants AKOrangeTextColor];
+    self.myPageControl.currentPageIndicatorTintColor = [AppConstants AKPurpleBaseColor];
+    self.myPageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
 }
 
 #pragma mark - UICollectionView DataSource
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return self.teamMembersList.count;
+    return self.cardsList.count;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView
@@ -141,8 +158,9 @@ const double ENDING_SCROLL_OFFSET = 640.0;
 
 - (void)configureCell:(RGCollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *nameOfImage = self.teamMembersList[indexPath.section];
-    cell.backgroundColor = (UIColor *)self.colorMappingDic[nameOfImage];
+    NSString *card = self.cardsList[indexPath.section];
+    cell.backgroundColor = (UIColor *)self.cardsMajorColorMappingDic[card];
+    cell.cardHeaderBackgroundView.backgroundColor = (UIColor *)self.cardsMinorColorMappingDic[card];
 }
 
 #pragma mark - UICollectionView Delegate

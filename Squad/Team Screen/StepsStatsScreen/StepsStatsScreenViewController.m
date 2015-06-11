@@ -34,7 +34,6 @@
     
     self.groupStepsLabel.format = @"%d";
     self.groupStepsLabel.method = UILabelCountingMethodEaseInOut;
-
     
 }
 
@@ -42,10 +41,10 @@
 {
     self.circleChart = [[VAProgressCircle alloc] initWithFrame:CGRectMake(100, 120, 170, 170)];
     
-    [self.circleChart setColor:[AppConstants AKOrangeTextColor]
-            withHighlightColor:[AppConstants AKOrangeTextColor]];
+    [self.circleChart setColor:[AppConstants AKPurpleBaseColor]
+            withHighlightColor:[AppConstants AKPurpleBaseColor]];
     
-    self.circleChart.circleTransitionColor = [AppConstants AKOrangeTextColor];
+    self.circleChart.circleTransitionColor = [AppConstants AKPurpleBaseColor];
     self.circleChart.accentLineTransitionColor = [AppConstants AKOrangeTextColor];
     self.circleChart.transitionType = VAProgressCircleColorTransitionTypeGradual;
     

@@ -11,17 +11,22 @@
 
 @interface AppConstants : NSObject
 
-// Card colors for team page
-+ (UIColor *)AKLightBlueColor;
-+ (UIColor *)AKOrangeColor;
-+ (UIColor *)AKTealColor;
-+ (UIColor *)AKPinkColor;
-+ (UIColor *)AKGoldColor;
-
 // App colors
 + (UIColor *)AKBaseGrayColor;
 + (UIColor *)AKGrayTextColor;
 + (UIColor *)AKOrangeTextColor;
++ (UIColor *)AKPurpleBaseColor;
 
+// Cards colors
++ (UIColor *)CardsDarkOrangeColor;
++ (UIColor *)CardsLightOrangeColor;
++ (UIColor *)CardsDarkBlueColor;
++ (UIColor *)CardsLightBlueColor;
++ (UIColor *)CardsDarkYellowColor;
++ (UIColor *)CardsLightYellowColor;
++ (UIColor *)CardsDarkTealColor;
++ (UIColor *)CardsLightTealColor;
++ (UIColor *)CardsDarkPurpleColor;
++ (UIColor *)CardsLightPurpleColor;
 
 @end

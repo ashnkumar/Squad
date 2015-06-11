@@ -26,7 +26,7 @@
 //        }
 //    }
     
-    [[UITabBar appearance] setTintColor:[AppConstants AKOrangeTextColor]];
+    [[UITabBar appearance] setTintColor:[AppConstants AKPurpleBaseColor]];
     
     return YES;
 }

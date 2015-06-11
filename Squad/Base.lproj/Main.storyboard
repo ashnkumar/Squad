@@ -13,6 +13,7 @@
             <string>Ubuntu</string>
             <string>Ubuntu</string>
             <string>Ubuntu</string>
+            <string>Ubuntu</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -28,7 +29,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TeamScreenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="2SX-mq-FXr">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="teamScreenBackground2" translatesAutoresizingMaskIntoConstraints="NO" id="2SX-mq-FXr">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hvt-U3-JpS">
@@ -45,9 +46,26 @@
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="293" height="252"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eGH-dP-Lej">
+                                                    <rect key="frame" x="0.0" y="0.0" width="293" height="73"/>
+                                                    <color key="backgroundColor" red="0.86274509799999999" green="0.36470588240000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="73" id="Uaj-p0-jac"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailingMargin" secondItem="eGH-dP-Lej" secondAttribute="trailing" constant="-8" id="J9f-Bn-Dzj"/>
+                                            <constraint firstItem="eGH-dP-Lej" firstAttribute="top" secondItem="YU3-Mj-TZC" secondAttribute="topMargin" constant="-8" id="dEB-PZ-dcv"/>
+                                            <constraint firstItem="eGH-dP-Lej" firstAttribute="leading" secondItem="YU3-Mj-TZC" secondAttribute="leadingMargin" constant="-8" id="noN-Or-9ns"/>
+                                        </constraints>
                                         <size key="customSize" width="293" height="252"/>
+                                        <connections>
+                                            <outlet property="cardHeaderBackgroundView" destination="eGH-dP-Lej" id="IDa-Od-qAh"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -62,21 +80,46 @@
                                     <constraint firstAttribute="height" constant="37" id="rbn-4M-3AC"/>
                                 </constraints>
                             </pageControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f7q-41-csg">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="67"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="squad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gwl-kV-JpO">
+                                        <rect key="frame" x="225" y="23" width="150" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="8ec-7a-PSx"/>
+                                            <constraint firstAttribute="height" constant="36" id="r2E-Yu-u2b"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="33"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.47450980392156861" green="0.18823529411764706" blue="0.48627450980392156" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="Gwl-kV-JpO" secondAttribute="centerX" id="4TH-GG-eqF"/>
+                                    <constraint firstAttribute="height" constant="67" id="h7D-fW-q0A"/>
+                                    <constraint firstItem="Gwl-kV-JpO" firstAttribute="top" secondItem="f7q-41-csg" secondAttribute="top" constant="23" id="yg6-1e-pn2"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.42352941176470588" green="0.0" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="f7q-41-csg" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-16" id="19Z-Uk-3i4"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="2SX-mq-FXr" secondAttribute="bottom" id="1Fr-TM-ewY"/>
                             <constraint firstAttribute="centerX" secondItem="pNK-Af-cAJ" secondAttribute="centerX" id="2hU-W0-tlj"/>
                             <constraint firstItem="Hvt-U3-JpS" firstAttribute="bottom" secondItem="tsR-hK-woN" secondAttribute="bottomMargin" id="BZI-6R-Fka"/>
+                            <constraint firstItem="f7q-41-csg" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" id="Dpf-xF-SeU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Hvt-U3-JpS" secondAttribute="trailing" constant="-16" id="Lgz-FM-fLg"/>
                             <constraint firstItem="2SX-mq-FXr" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-16" id="Oac-jw-u7h"/>
+                            <constraint firstAttribute="centerX" secondItem="f7q-41-csg" secondAttribute="centerX" id="Vwb-at-X7N"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="f7q-41-csg" secondAttribute="trailing" constant="-16" id="e26-CI-vpR"/>
                             <constraint firstItem="2SX-mq-FXr" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" id="fBD-Ov-7be"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2SX-mq-FXr" secondAttribute="trailing" constant="-16" id="m94-tw-qGw"/>
                             <constraint firstItem="Hvt-U3-JpS" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-16" id="sjn-oh-yWe"/>
                             <constraint firstItem="Hvt-U3-JpS" firstAttribute="top" secondItem="pNK-Af-cAJ" secondAttribute="bottom" constant="-80" id="xOS-Pa-VxM"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="teamSelected" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="" image="teamUnselectedB" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="collectionView" destination="Hvt-U3-JpS" id="PyZ-6n-tdh"/>
                         <outlet property="myPageControl" destination="pNK-Af-cAJ" id="ejg-lk-Mvz"/>
@@ -266,8 +309,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="TeamScreenBackground" width="375" height="610"/>
-        <image name="teamSelected" width="47" height="36"/>
+        <image name="teamScreenBackground2" width="379" height="614"/>
+        <image name="teamUnselectedB" width="49" height="38"/>
         <image name="trophySelected" width="32" height="31"/>
     </resources>
 </document>

@@ -20,6 +20,7 @@
     
     self.tabBar.backgroundImage = [UIImage imageNamed:@"tabBarBackground5"];
     self.tabBar.shadowImage = [[UIImage alloc] init];
+    
 }
 
 - (void)didReceiveMemoryWarning {
