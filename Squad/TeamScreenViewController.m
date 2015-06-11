@@ -109,7 +109,7 @@ const double ENDING_SCROLL_OFFSET = 640.0;
     self.slider.delegate = self;
     self.slider.initialPageNumber = 0;
     self.slider.view.frame = CGRectMake(0, 100, self.view.frame.size.width, 350);
-    NSLog(@"My frame size width is: %@", NSStringFromCGSize(self.view.frame.size));
+
     [self.view addSubview:self.slider.view];
     [self addChildViewController:self.slider];
     
@@ -180,8 +180,8 @@ const double ENDING_SCROLL_OFFSET = 640.0;
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    NSLog(@"Did end decelearting");
-    NSLog(@"Offset is: %@", NSStringFromCGPoint(self.collectionView.contentOffset));
+//    NSLog(@"Did end decelearting");
+//    NSLog(@"Offset is: %@", NSStringFromCGPoint(self.collectionView.contentOffset));
     
     [self moveToRightPosition];
     [self calculateCenterIndex];
@@ -206,8 +206,8 @@ const double ENDING_SCROLL_OFFSET = 640.0;
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
     [self moveToRightPosition];
-    NSLog(@"didEndDragging");
-    NSLog(@"Offset is: %@", NSStringFromCGPoint(self.collectionView.contentOffset));
+//    NSLog(@"didEndDragging");
+//    NSLog(@"Offset is: %@", NSStringFromCGPoint(self.collectionView.contentOffset));
 }
 
 #pragma mark - UIViewControllerTransitioningDelegate
