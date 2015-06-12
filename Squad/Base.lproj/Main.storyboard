@@ -8,8 +8,10 @@
         <mutableArray key="Ubuntu-C.ttf">
             <string>UbuntuCondensed-Regular</string>
             <string>UbuntuCondensed-Regular</string>
+            <string>UbuntuCondensed-Regular</string>
         </mutableArray>
         <mutableArray key="Ubuntu-Regular.ttf">
+            <string>Ubuntu</string>
             <string>Ubuntu</string>
             <string>Ubuntu</string>
             <string>Ubuntu</string>
@@ -49,22 +51,50 @@
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eGH-dP-Lej">
                                                     <rect key="frame" x="0.0" y="0.0" width="293" height="73"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4X4-X6-bP6">
+                                                            <rect key="frame" x="26" y="26" width="241" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="241" id="Mu5-Xu-1di"/>
+                                                                <constraint firstAttribute="height" constant="21" id="q2H-1C-5Je"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="16"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
                                                     <color key="backgroundColor" red="0.86274509799999999" green="0.36470588240000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="centerX" secondItem="4X4-X6-bP6" secondAttribute="centerX" id="SPz-AN-d8O"/>
                                                         <constraint firstAttribute="height" constant="73" id="Uaj-p0-jac"/>
+                                                        <constraint firstAttribute="centerY" secondItem="4X4-X6-bP6" secondAttribute="centerY" id="XEL-s2-Tqe"/>
                                                     </constraints>
                                                 </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTQ-h1-gpS">
+                                                    <rect key="frame" x="45" y="83" width="202" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="202" id="Qin-2K-2Cf"/>
+                                                        <constraint firstAttribute="height" constant="40" id="d6a-FC-7JJ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="UbuntuCondensed-Regular" family="Ubuntu Condensed" pointSize="16"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
+                                            <constraint firstAttribute="centerX" secondItem="bTQ-h1-gpS" secondAttribute="centerX" id="Bly-xl-JhY"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="eGH-dP-Lej" secondAttribute="trailing" constant="-8" id="J9f-Bn-Dzj"/>
+                                            <constraint firstItem="bTQ-h1-gpS" firstAttribute="top" secondItem="eGH-dP-Lej" secondAttribute="bottom" constant="10" id="TJW-m0-tqN"/>
                                             <constraint firstItem="eGH-dP-Lej" firstAttribute="top" secondItem="YU3-Mj-TZC" secondAttribute="topMargin" constant="-8" id="dEB-PZ-dcv"/>
                                             <constraint firstItem="eGH-dP-Lej" firstAttribute="leading" secondItem="YU3-Mj-TZC" secondAttribute="leadingMargin" constant="-8" id="noN-Or-9ns"/>
                                         </constraints>
                                         <size key="customSize" width="293" height="252"/>
                                         <connections>
                                             <outlet property="cardHeaderBackgroundView" destination="eGH-dP-Lej" id="IDa-Od-qAh"/>
+                                            <outlet property="cardNameLabel" destination="4X4-X6-bP6" id="qwq-Pz-7Ye"/>
+                                            <outlet property="cardStatsLabel" destination="bTQ-h1-gpS" id="mCF-J1-dka"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

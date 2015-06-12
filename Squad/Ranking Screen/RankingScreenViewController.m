@@ -31,10 +31,9 @@ const float STATS_MINI_HEADER_LABEL_FONT_SIZE = 15.0;
     self.rankingTableView.HVTableViewDataSource = self;
     self.rankingTableView.HVTableViewDelegate = self;
     self.rankingTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.rankingTableView.backgroundColor = [AppConstants AKBaseGrayColor];
-    
-    // Set the bar tint for when it is inactive
-    UITabBarItem *tabBarItem = self.tabBarItem;
+    self.rankingTableView.backgroundColor = [UIColor colorWithRed:140/255.0
+                                                            green:140/255.0
+                                                             blue:140/255.0 alpha:1.0];
     
 }
 
@@ -105,72 +104,72 @@ const float STATS_MINI_HEADER_LABEL_FONT_SIZE = 15.0;
     
     // Icons
     UIImageView *glucoseDropIcon = [[UIImageView alloc] initWithFrame:CGRectMake(69, 106, 15, 32)];
-    glucoseDropIcon.image = [UIImage imageNamed:@"glucoseIcon"];
+    glucoseDropIcon.image = [UIImage imageNamed:@"glucoseIcon2"];
     [cell.contentView addSubview:glucoseDropIcon];
     
     UIImageView *shoeIcon = [[UIImageView alloc] initWithFrame:CGRectMake(62, 162, 32, 26)];
-    shoeIcon.image = [UIImage imageNamed:@"shoeIcon"];
+    shoeIcon.image = [UIImage imageNamed:@"shoeIcon2"];
     [cell.contentView addSubview:shoeIcon];
     
     UIImageView *forkIcon = [[UIImageView alloc] initWithFrame:CGRectMake(71, 216, 12, 35)];
-    forkIcon.image = [UIImage imageNamed:@"forkIcon"];
+    forkIcon.image = [UIImage imageNamed:@"forkIcon2"];
     [cell.contentView addSubview:forkIcon];
     
     // Heading Labels
     UILabel *glucoseHeaderLabel = [[UILabel alloc] initWithFrame:CGRectMake(122, 100, 100, 21)];
     glucoseHeaderLabel.text = @"Glucose";
-    glucoseHeaderLabel.textColor = [AppConstants AKGrayTextColor];
+    glucoseHeaderLabel.textColor = [AppConstants AKPurpleBaseColor];
     glucoseHeaderLabel.font = [UIFont fontWithName:@"Ubuntu-Light" size:STATS_HEADER_LABEL_FONT_SIZE];
     [cell.contentView addSubview:glucoseHeaderLabel];
     
     UILabel *stepsHeaderLabel = [[UILabel alloc] initWithFrame:CGRectMake(122, 156, 100, 20)];
     stepsHeaderLabel.text = @"Steps";
-    stepsHeaderLabel.textColor = [AppConstants AKGrayTextColor];
+    stepsHeaderLabel.textColor = [AppConstants AKPurpleBaseColor];
     stepsHeaderLabel.font = [UIFont fontWithName:@"Ubuntu-Light" size:STATS_HEADER_LABEL_FONT_SIZE];
     [cell.contentView addSubview:stepsHeaderLabel];
     
     UILabel *caloriesHeaderLabel = [[UILabel alloc] initWithFrame:CGRectMake(122, 209, 100, 23)];
     caloriesHeaderLabel.text = @"Calories";
-    caloriesHeaderLabel.textColor = [AppConstants AKGrayTextColor];
+    caloriesHeaderLabel.textColor = [AppConstants AKPurpleBaseColor];
     caloriesHeaderLabel.font = [UIFont fontWithName:@"Ubuntu-Light" size:STATS_HEADER_LABEL_FONT_SIZE];
     [cell.contentView addSubview:caloriesHeaderLabel];
     
     // Mini-heading labels
     UILabel *avgGlucoseLabel = [[UILabel alloc] initWithFrame:CGRectMake(122, 120, 124, 23)];
     avgGlucoseLabel.text = @"average glucose level:";
-    avgGlucoseLabel.textColor = [AppConstants AKGrayTextColor];
+    avgGlucoseLabel.textColor = [AppConstants AKBaseGrayColor];
     avgGlucoseLabel.font = [UIFont fontWithName:@"UbuntuCondensed-Regular" size:STATS_MINI_HEADER_LABEL_FONT_SIZE];
     [cell.contentView addSubview:avgGlucoseLabel];
     
     UILabel *stepsTakenLabel = [[UILabel alloc] initWithFrame:CGRectMake(122, 176, 87, 17)];
     stepsTakenLabel.text = @"steps taken:";
-    stepsTakenLabel.textColor = [AppConstants AKGrayTextColor];
+    stepsTakenLabel.textColor = [AppConstants AKBaseGrayColor];
     stepsTakenLabel.font = [UIFont fontWithName:@"UbuntuCondensed-Regular" size:STATS_MINI_HEADER_LABEL_FONT_SIZE];
     [cell.contentView addSubview:stepsTakenLabel];
     
     UILabel *caloriesLabel = [[UILabel alloc] initWithFrame:CGRectMake(122, 230, 125, 17)];
     caloriesLabel.text = @"average kCal per meal:";
-    caloriesLabel.textColor = [AppConstants AKGrayTextColor];
+    caloriesLabel.textColor = [AppConstants AKBaseGrayColor];
     caloriesLabel.font = [UIFont fontWithName:@"UbuntuCondensed-Regular" size:STATS_MINI_HEADER_LABEL_FONT_SIZE];
     [cell.contentView addSubview:caloriesLabel];
     
-    // Orange stats labels
+    // Purple stats labels
 
     UILabel *glucoseStatsLabel = [[UILabel alloc] initWithFrame:CGRectMake(248, 120, 126, 23)];
     glucoseStatsLabel.text = @"140 mg/dL";
-    glucoseStatsLabel.textColor = [AppConstants AKOrangeTextColor];
+    glucoseStatsLabel.textColor = [UIColor whiteColor];
     glucoseStatsLabel.font = [UIFont fontWithName:@"UbuntuCondensed-Regular" size:STATS_MINI_HEADER_LABEL_FONT_SIZE];
     [cell.contentView addSubview:glucoseStatsLabel];
     
     UILabel *stepsStatsLabel = [[UILabel alloc] initWithFrame:CGRectMake(195, 174, 126, 23)];
     stepsStatsLabel.text = @"55,445";
-    stepsStatsLabel.textColor = [AppConstants AKOrangeTextColor];
+    stepsStatsLabel.textColor = [UIColor whiteColor];
     stepsStatsLabel.font = [UIFont fontWithName:@"UbuntuCondensed-Regular" size:STATS_MINI_HEADER_LABEL_FONT_SIZE];
     [cell.contentView addSubview:stepsStatsLabel];
     
     UILabel *calsStatsLabel = [[UILabel alloc] initWithFrame:CGRectMake(253, 228, 126, 23)];
     calsStatsLabel.text = @"222 cals";
-    calsStatsLabel.textColor = [AppConstants AKOrangeTextColor];
+    calsStatsLabel.textColor = [UIColor whiteColor];
     calsStatsLabel.font = [UIFont fontWithName:@"UbuntuCondensed-Regular" size:STATS_MINI_HEADER_LABEL_FONT_SIZE];
     [cell.contentView addSubview:calsStatsLabel];
     

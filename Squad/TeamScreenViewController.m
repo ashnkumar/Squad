@@ -25,6 +25,7 @@ const double ENDING_SCROLL_OFFSET = 640.0;
 #import "StepsStatsScreenViewController.h"
 #import "DDPageControl.h"
 #import "GlucoseStatsScreenViewController.h"
+#import "CardSwipeInteractionController.h"
 
 @interface TeamScreenViewController () <UIViewControllerTransitioningDelegate, UICollectionViewDataSource, UICollectionViewDelegate, TTSliddingPageDelegate, TTSlidingPagesDataSource>
 
@@ -41,6 +42,7 @@ const double ENDING_SCROLL_OFFSET = 640.0;
 @property (assign, nonatomic) CGPoint centerCardPoint;
 @property (assign, nonatomic) int currentCenterIndex;
 @property (strong, nonatomic) NSIndexPath *centerCardIndexPath;
+@property (strong, nonatomic) CardSwipeInteractionController *swipeInteractionController;
 
 // Sliding VC
 @property (strong, nonatomic) TTScrollSlidingPagesController *slider;
@@ -57,6 +59,7 @@ const double ENDING_SCROLL_OFFSET = 640.0;
 - (id)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
         _transition = [CardAnimator new];
+        _swipeInteractionController = [CardSwipeInteractionController new];
     }
     return self;
 }
@@ -88,7 +91,7 @@ const double ENDING_SCROLL_OFFSET = 640.0;
                              @"2": @[@"Justin Y.", @"+650 calories"],
                              @"3": @[@"Catherine J.", @"+565 steps"],
                              @"4": @[@"Joe S.", @"+140 calories"],
-                             @"5": @[@"Xander P", @"+245 steps"],
+                             @"5": @[@"Xander P.", @"+245 steps"],
                              @"6": @[@"", @""]};
     
     self.cardsMinorColorMappingDic = @{@"clearColor": [UIColor clearColor],
@@ -161,6 +164,10 @@ const double ENDING_SCROLL_OFFSET = 640.0;
     NSString *card = self.cardsList[indexPath.section];
     cell.backgroundColor = (UIColor *)self.cardsMajorColorMappingDic[card];
     cell.cardHeaderBackgroundView.backgroundColor = (UIColor *)self.cardsMinorColorMappingDic[card];
+    cell.cardNameLabel.text = (NSString *)self.teamMembersList[[NSString stringWithFormat:@"%ld", (long)indexPath.section]][0];
+    cell.cardStatsLabel.text = (NSString *)self.teamMembersList[[NSString stringWithFormat:@"%ld", (long)indexPath.section]][1];
+//    [self.swipeInteractionController wireToView:cell.contentView];
+//    [self wirePanToCellView:cell.contentView];
 }
 
 #pragma mark - UICollectionView Delegate
@@ -221,6 +228,26 @@ const double ENDING_SCROLL_OFFSET = 640.0;
     }
 }
 
+- (void)wirePanToCellView:(UIView *)view
+{
+    UIPanGestureRecognizer *gesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
+    [view addGestureRecognizer:gesture];
+}
+
+- (void)handlePanGesture:(UIPanGestureRecognizer *)gestureRecognizer
+{
+    CGPoint translation = [gestureRecognizer translationInView:gestureRecognizer.view.superview];
+//    NSLog(@"Translation: %@", NSStringFromCGPoint(translation));
+    
+    if (translation.y < 0) {
+        NSLog(@"Flipping up");
+    }
+    
+    else {
+        
+    }
+}
+
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
     [self moveToRightPosition];
@@ -245,6 +272,33 @@ const double ENDING_SCROLL_OFFSET = 640.0;
     self.transition.originFrame = self.cardOriginalFrame;
     self.transition.presenting = NO;
     return self.transition;
+}
+
+
+#pragma mark - UINavigationControllerDelegate
+
+- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
+                                  animationControllerForOperation:(UINavigationControllerOperation)operation
+                                               fromViewController:(UIViewController *)fromVC
+                                                 toViewController:(UIViewController *)toVC {
+    
+//    if (operation == UINavigationControllerOperationPush) {
+//        [_interactionController wireToViewController:toVC];
+//    }
+    
+//    _flipAnimationController.reverse = operation == UINavigationControllerOperationPop;
+//    return _flipAnimationController;
+    NSLog(@"We got an animated!");
+    return nil;
+}
+
+- (id <UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController
+                          interactionControllerForAnimationController:(id <UIViewControllerAnimatedTransitioning>) animationController {
+    
+    
+    NSLog(@"We got an interactive!");
+    return nil;
+    //    return _interactionController.interactionInProgress ? _interactionController : nil;
 }
 
 

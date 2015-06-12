@@ -43,6 +43,7 @@
 		42F0EF311B27E0B300F48CE4 /* CaloriesStatsScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42F0EF301B27E0B300F48CE4 /* CaloriesStatsScreenView.xib */; };
 		42F0EF371B27FBCE00F48CE4 /* Ubuntu-M.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 42F0EF361B27FBC300F48CE4 /* Ubuntu-M.ttf */; };
 		42F0EF3C1B2A131A00F48CE4 /* MyTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F0EF3B1B2A131A00F48CE4 /* MyTabBarController.m */; };
+		42F0EF3F1B2A565C00F48CE4 /* CardSwipeInteractionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F0EF3E1B2A565C00F48CE4 /* CardSwipeInteractionController.m */; };
 		697BF01C5D939F5E2C5E773F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B56D4867292F4F4E68D05083 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -120,6 +121,8 @@
 		42F0EF361B27FBC300F48CE4 /* Ubuntu-M.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-M.ttf"; sourceTree = "<group>"; };
 		42F0EF3A1B2A131A00F48CE4 /* MyTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyTabBarController.h; path = TabBar/MyTabBarController.h; sourceTree = "<group>"; };
 		42F0EF3B1B2A131A00F48CE4 /* MyTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyTabBarController.m; path = TabBar/MyTabBarController.m; sourceTree = "<group>"; };
+		42F0EF3D1B2A565C00F48CE4 /* CardSwipeInteractionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardSwipeInteractionController.h; path = "Card Animations/CardSwipeInteractionController.h"; sourceTree = "<group>"; };
+		42F0EF3E1B2A565C00F48CE4 /* CardSwipeInteractionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardSwipeInteractionController.m; path = "Card Animations/CardSwipeInteractionController.m"; sourceTree = "<group>"; };
 		B56D4867292F4F4E68D05083 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D24CC1498F348284CB857A38 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DADC4A3E965F103C0E1E18F0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -149,6 +152,8 @@
 			children = (
 				424D1EAF1B23EFA0002509A9 /* CardAnimator.h */,
 				424D1EB01B23EFA0002509A9 /* CardAnimator.m */,
+				42F0EF3D1B2A565C00F48CE4 /* CardSwipeInteractionController.h */,
+				42F0EF3E1B2A565C00F48CE4 /* CardSwipeInteractionController.m */,
 			);
 			name = "Card Animations";
 			sourceTree = "<group>";
@@ -551,6 +556,7 @@
 				425D549D1B2256950069FF61 /* TeamScreenViewController.m in Sources */,
 				424D1EB11B23EFA0002509A9 /* CardAnimator.m in Sources */,
 				425D54971B2256950069FF61 /* main.m in Sources */,
+				42F0EF3F1B2A565C00F48CE4 /* CardSwipeInteractionController.m in Sources */,
 				42F0EF1D1B27DD5D00F48CE4 /* TTBlackTriangle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
