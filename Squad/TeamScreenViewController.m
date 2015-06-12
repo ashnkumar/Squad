@@ -200,6 +200,8 @@ const double ENDING_SCROLL_OFFSET = 640.0;
     TeamScreenDetailViewController *tdvc = [mainStoryboard instantiateViewControllerWithIdentifier:@"TeamScreenDetailView"];
     
     tdvc.transitioningDelegate = self;
+    NSString *card = self.cardsList[indexPath.section];
+    tdvc.cardBaseColor = (UIColor *)self.cardsMinorColorMappingDic[card];
     
     [self presentViewController:tdvc animated:YES completion:nil];
     

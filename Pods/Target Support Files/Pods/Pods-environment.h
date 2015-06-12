@@ -6,11 +6,23 @@
 // project.
 
 
-// PNChart
-#define COCOAPODS_POD_AVAILABLE_PNChart
-#define COCOAPODS_VERSION_MAJOR_PNChart 0
-#define COCOAPODS_VERSION_MINOR_PNChart 8
-#define COCOAPODS_VERSION_PATCH_PNChart 3
+// FrameAccessor
+#define COCOAPODS_POD_AVAILABLE_FrameAccessor
+#define COCOAPODS_VERSION_MAJOR_FrameAccessor 1
+#define COCOAPODS_VERSION_MINOR_FrameAccessor 3
+#define COCOAPODS_VERSION_PATCH_FrameAccessor 2
+
+// GraphKit
+#define COCOAPODS_POD_AVAILABLE_GraphKit
+#define COCOAPODS_VERSION_MAJOR_GraphKit 1
+#define COCOAPODS_VERSION_MINOR_GraphKit 1
+#define COCOAPODS_VERSION_PATCH_GraphKit 1
+
+// MKFoundationKit/NSArray
+#define COCOAPODS_POD_AVAILABLE_MKFoundationKit_NSArray
+#define COCOAPODS_VERSION_MAJOR_MKFoundationKit_NSArray 1
+#define COCOAPODS_VERSION_MINOR_MKFoundationKit_NSArray 2
+#define COCOAPODS_VERSION_PATCH_MKFoundationKit_NSArray 3
 
 // UICountingLabel
 #define COCOAPODS_POD_AVAILABLE_UICountingLabel

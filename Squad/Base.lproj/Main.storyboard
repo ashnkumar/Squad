@@ -14,8 +14,6 @@
             <string>UbuntuCondensed-Regular</string>
             <string>UbuntuCondensed-Regular</string>
             <string>UbuntuCondensed-Regular</string>
-            <string>UbuntuCondensed-Regular</string>
-            <string>UbuntuCondensed-Regular</string>
         </mutableArray>
         <mutableArray key="Ubuntu-LI.ttf">
             <string>Ubuntu-LightItalic</string>
@@ -328,26 +326,6 @@
                                 <color key="textColor" red="0.90196078431372551" green="0.61568627450980395" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="goal:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjo-mO-ZxT">
-                                <rect key="frame" x="211" y="217" width="29" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="29" id="NFg-dG-Ffk"/>
-                                    <constraint firstAttribute="height" constant="21" id="mYx-2m-Uq5"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="UbuntuCondensed-Regular" family="Ubuntu Condensed" pointSize="12"/>
-                                <color key="textColor" red="0.90196078431372551" green="0.61568627450980395" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10,000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kb5-ao-7ha">
-                                <rect key="frame" x="198" y="234" width="55" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="55" id="ARg-Y2-hCZ"/>
-                                    <constraint firstAttribute="height" constant="21" id="z4N-kn-CgF"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="UbuntuCondensed-Regular" family="Ubuntu Condensed" pointSize="12"/>
-                                <color key="textColor" red="0.90196078430000004" green="0.61568627450000002" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -361,16 +339,12 @@
                             <constraint firstItem="5jN-Mt-URd" firstAttribute="centerX" secondItem="AXh-Wo-muA" secondAttribute="centerX" id="Hci-Vy-Tbt"/>
                             <constraint firstAttribute="centerX" secondItem="owC-2h-ebL" secondAttribute="centerX" id="KbD-4W-YB1"/>
                             <constraint firstItem="dzc-Py-2gj" firstAttribute="centerX" secondItem="iVf-mb-uD7" secondAttribute="centerX" id="Q7w-tm-zWt"/>
-                            <constraint firstItem="dzc-Py-2gj" firstAttribute="centerX" secondItem="bjo-mO-ZxT" secondAttribute="centerX" id="Tab-qa-tqp"/>
                             <constraint firstItem="dzc-Py-2gj" firstAttribute="leading" secondItem="Jpx-58-ZqP" secondAttribute="leading" id="Uk2-So-NMb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="f6r-g2-WCw" secondAttribute="trailing" constant="-16" id="VGB-R1-t22"/>
                             <constraint firstItem="f6r-g2-WCw" firstAttribute="leading" secondItem="d7b-tF-jve" secondAttribute="leadingMargin" constant="-16" id="WCf-OR-dZE"/>
                             <constraint firstItem="Jpx-58-ZqP" firstAttribute="top" secondItem="f6r-g2-WCw" secondAttribute="bottom" constant="9" id="Wa8-68-UV9"/>
                             <constraint firstItem="1zl-Nb-sDN" firstAttribute="top" secondItem="bNk-aU-RK5" secondAttribute="bottom" constant="3" id="bq0-ST-URY"/>
                             <constraint firstAttribute="centerX" secondItem="Jpx-58-ZqP" secondAttribute="centerX" id="c3r-2x-6f2"/>
-                            <constraint firstItem="kb5-ao-7ha" firstAttribute="centerX" secondItem="bjo-mO-ZxT" secondAttribute="centerX" id="eiZ-D7-luE"/>
-                            <constraint firstItem="kb5-ao-7ha" firstAttribute="top" secondItem="bjo-mO-ZxT" secondAttribute="bottom" constant="-4" id="rY2-pT-5de"/>
-                            <constraint firstItem="bjo-mO-ZxT" firstAttribute="top" secondItem="iVf-mb-uD7" secondAttribute="bottom" constant="37" id="smY-bg-yL5"/>
                             <constraint firstItem="AXh-Wo-muA" firstAttribute="top" secondItem="Jpx-58-ZqP" secondAttribute="bottom" constant="16" id="uIV-jm-AbY"/>
                             <constraint firstItem="5jN-Mt-URd" firstAttribute="top" secondItem="AXh-Wo-muA" secondAttribute="bottom" id="ufG-iz-HH2"/>
                             <constraint firstItem="iVf-mb-uD7" firstAttribute="top" secondItem="dzc-Py-2gj" secondAttribute="bottom" id="vCS-gE-4Y4"/>
@@ -379,6 +353,7 @@
                     </view>
                     <connections>
                         <outlet property="bloodGlucoseLabel" destination="bNk-aU-RK5" id="W9m-7z-k23"/>
+                        <outlet property="detailCardHeaderView" destination="f6r-g2-WCw" id="LQZ-er-vDa"/>
                         <outlet property="totalCaloriesLabel" destination="5jN-Mt-URd" id="x36-dH-PPn"/>
                         <outlet property="totalStepsLabel" destination="iVf-mb-uD7" id="inw-PB-nvm"/>
                     </connections>

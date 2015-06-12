@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+
 #import "VAProgressCircle.h"
 #import "UICountingLabel.h"
+#import "GraphKit.h"
 
 @interface TeamScreenDetailViewController : UIViewController
+
+@property (strong, nonatomic) UIColor *cardBaseColor;
 
 // Steps circle
 @property (strong, nonatomic) VAProgressCircle *circleChart;
@@ -20,8 +24,7 @@
 
 // Calories chart
 @property (weak, nonatomic) IBOutlet UICountingLabel *totalCaloriesLabel;
-
-
+@property (strong, nonatomic) GKBar *caloriesBarChart;
 
 // bloodGlucoseSection
 @property (weak, nonatomic) IBOutlet UICountingLabel *bloodGlucoseLabel;

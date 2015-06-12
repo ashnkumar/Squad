@@ -11,6 +11,7 @@
 #import "AppConstants.h"
 
 @interface TeamScreenDetailViewController ()
+@property (weak, nonatomic) IBOutlet UIView *detailCardHeaderView;
 @property (strong, nonatomic) NSTimer *fillupTimer;
 @end
 
@@ -22,6 +23,17 @@
     
     [self setupUI];
     [self fillCircleChart];
+    
+    // Start the filling of the bar chart
+    [NSTimer scheduledTimerWithTimeInterval:1.0
+                                     target:self
+                                   selector:@selector(fillBarChart:)
+                                   userInfo:nil
+                                    repeats:NO];
+    [self setupAllCountingLabels];
+    [self startCountingLabels];
+    
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -37,19 +49,42 @@
 
 - (void)setupUI
 {
-    [self addChart];
+    self.detailCardHeaderView.backgroundColor = self.cardBaseColor;
+    [self addPieChart];
     [self addGoalLabel];
+    [self addCaloriesChart];
 }
 
-- (void)addChart
+- (void)setupAllCountingLabels
+{
+    self.totalStepsLabel.format = @"%d";
+    self.totalStepsLabel.textColor = self.cardBaseColor;
+    
+    self.totalCaloriesLabel.format = @"%d";
+    self.totalCaloriesLabel.textColor = self.cardBaseColor;
+    
+    self.bloodGlucoseLabel.format = @"%d";
+    self.bloodGlucoseLabel.textColor = self.cardBaseColor;
+}
+
+- (void)startCountingLabels
+{
+    [self.totalStepsLabel countFrom:0 to:11300 withDuration:1.5f];
+    [self.totalCaloriesLabel countFrom:0 to:1202 withDuration:1.5f];
+    [self.bloodGlucoseLabel countFrom:0 to:140 withDuration:1.5f];
+}
+
+#pragma mark - Pie Chart
+
+- (void)addPieChart
 {
     self.circleChart = [[VAProgressCircle alloc] initWithFrame:CGRectMake(20, 200, 120, 120)];
     
-    [self.circleChart setColor:[AppConstants CardsDarkOrangeTextColor]
-            withHighlightColor:[AppConstants CardsDarkOrangeTextColor]];
+    [self.circleChart setColor:self.cardBaseColor
+            withHighlightColor:self.cardBaseColor];
     
-    self.circleChart.circleTransitionColor = [AppConstants CardsDarkOrangeTextColor];
-    self.circleChart.accentLineTransitionColor = [AppConstants CardsDarkOrangeTextColor];
+    self.circleChart.circleTransitionColor = self.cardBaseColor;
+    self.circleChart.accentLineTransitionColor = self.cardBaseColor;
     self.circleChart.transitionType = VAProgressCircleColorTransitionTypeGradual;
     
     [self.view addSubview:self.circleChart];
@@ -61,17 +96,33 @@
     UILabel *goalHeader = [[UILabel alloc] initWithFrame:CGRectMake(67, 234, 29, 21)];
     goalHeader.textAlignment = NSTextAlignmentCenter;
     goalHeader.font = [UIFont fontWithName:@"UbuntuCondensed-Regular" size:12.0];
-    goalHeader.textColor = [AppConstants CardsDarkOrangeTextColor];
+    goalHeader.textColor = self.cardBaseColor;
     goalHeader.text = @"goal:";
     
     UILabel *goalAmount = [[UILabel alloc] initWithFrame:CGRectMake(54, 251, 55, 21)];
     goalAmount.textAlignment = NSTextAlignmentCenter;
     goalAmount.font = [UIFont fontWithName:@"UbuntuCondensed-Regular" size:12.0];
-    goalAmount.textColor = [AppConstants CardsDarkOrangeTextColor];
+    goalAmount.textColor = self.cardBaseColor;
     goalAmount.text = @"10,000";
     
     [self.view insertSubview:goalHeader aboveSubview:self.circleChart];
     [self.view insertSubview:goalAmount aboveSubview:self.circleChart];
+    
+    
+    UILabel *caloriesGoalHeader = [[UILabel alloc] initWithFrame:CGRectMake(217, 200, 29, 21)];
+    caloriesGoalHeader.textAlignment = NSTextAlignmentCenter;
+    caloriesGoalHeader.font = [UIFont fontWithName:@"UbuntuCondensed-Regular" size:12.0];
+    caloriesGoalHeader.textColor = self.cardBaseColor;
+    caloriesGoalHeader.text = @"goal:";
+    
+    UILabel *caloriesGoalAmount = [[UILabel alloc] initWithFrame:CGRectMake(215, 215, 29, 21)];
+    caloriesGoalAmount.font = [UIFont fontWithName:@"UbuntuCondensed-Regular" size:12.0];
+    caloriesGoalAmount.textAlignment = NSTextAlignmentCenter;
+    caloriesGoalAmount.textColor = self.cardBaseColor;
+    caloriesGoalAmount.text = @"2,000";
+    
+    [self.view addSubview:caloriesGoalHeader];
+    [self.view addSubview:caloriesGoalAmount];
 }
 
 
@@ -109,6 +160,29 @@
 }
 
 
+
+#pragma mark - Bar Chart
+
+- (void)addCaloriesChart
+{
+    self.caloriesBarChart = [[GKBar alloc] initWithFrame:CGRectMake(180, 200, 100, 125)];
+    self.caloriesBarChart.animated = YES;
+    self.caloriesBarChart.foregroundColor = self.cardBaseColor;
+    self.caloriesBarChart.backgroundColor = [UIColor colorWithRed:216/255.0 green:216/255.0 blue:216/255.0 alpha:1.0];
+    
+    [self.view addSubview:self.caloriesBarChart];
+    [self.view sendSubviewToBack:self.caloriesBarChart];
+}
+
+- (void)fillBarChart:(id)sender
+{
+    self.caloriesBarChart.percentage += 60;
+}
+
+
+
+
+#pragma mark - Other
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
