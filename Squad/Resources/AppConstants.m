@@ -78,4 +78,9 @@
     return [UIColor colorWithRed:168/255.0 green: 70/255.0 blue:254/255.0 alpha:1.0f];
 }
 
++ (UIColor *)CardsDarkOrangeTextColor
+{
+    return [UIColor colorWithRed:239/255.0 green: 171/255.0 blue:92/255.0 alpha:1.0f];
+}
+
 @end

@@ -16,7 +16,7 @@
 
 - (instancetype)init {
     if (self = [super init]) {
-        _duration = 0.5;
+        _duration = 0.2;
         _presenting = YES;
         _originFrame = CGRectZero;
     }
@@ -68,9 +68,16 @@
                              toView.center = CGPointMake(CGRectGetMidX(finalFrame), CGRectGetMidY(finalFrame));
                              fromView.alpha = .5;
                          } else {
+                             
+
+                             
                              toView.alpha = 1.0;
                              fromView.transform = scaleTransform;
                              fromView.center = CGPointMake(CGRectGetMidX(self.originFrame), CGRectGetMidY(self.originFrame));
+                             
+                              [[NSNotificationCenter defaultCenter]
+                               postNotificationName:@"DetailCardDismissed"
+                               object:self];
                          }
 
     } completion:^(BOOL finished) {

@@ -29,4 +29,6 @@
 + (UIColor *)CardsDarkPurpleColor;
 + (UIColor *)CardsLightPurpleColor;
 
++ (UIColor *)CardsDarkOrangeTextColor;
+
 @end

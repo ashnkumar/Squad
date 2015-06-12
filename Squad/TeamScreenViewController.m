@@ -25,7 +25,6 @@ const double ENDING_SCROLL_OFFSET = 640.0;
 #import "StepsStatsScreenViewController.h"
 #import "DDPageControl.h"
 #import "GlucoseStatsScreenViewController.h"
-#import "CardSwipeInteractionController.h"
 
 @interface TeamScreenViewController () <UIViewControllerTransitioningDelegate, UICollectionViewDataSource, UICollectionViewDelegate, TTSliddingPageDelegate, TTSlidingPagesDataSource>
 
@@ -42,7 +41,6 @@ const double ENDING_SCROLL_OFFSET = 640.0;
 @property (assign, nonatomic) CGPoint centerCardPoint;
 @property (assign, nonatomic) int currentCenterIndex;
 @property (strong, nonatomic) NSIndexPath *centerCardIndexPath;
-@property (strong, nonatomic) CardSwipeInteractionController *swipeInteractionController;
 
 // Sliding VC
 @property (strong, nonatomic) TTScrollSlidingPagesController *slider;
@@ -59,13 +57,17 @@ const double ENDING_SCROLL_OFFSET = 640.0;
 - (id)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
         _transition = [CardAnimator new];
-        _swipeInteractionController = [CardSwipeInteractionController new];
     }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(cardDismissed:)
+                                                 name:@"DetailCardDismissed"
+                                               object:nil];
 
     [self setupCards];
     [self setupCardAnimations];
@@ -166,8 +168,6 @@ const double ENDING_SCROLL_OFFSET = 640.0;
     cell.cardHeaderBackgroundView.backgroundColor = (UIColor *)self.cardsMinorColorMappingDic[card];
     cell.cardNameLabel.text = (NSString *)self.teamMembersList[[NSString stringWithFormat:@"%ld", (long)indexPath.section]][0];
     cell.cardStatsLabel.text = (NSString *)self.teamMembersList[[NSString stringWithFormat:@"%ld", (long)indexPath.section]][1];
-//    [self.swipeInteractionController wireToView:cell.contentView];
-//    [self wirePanToCellView:cell.contentView];
 }
 
 #pragma mark - UICollectionView Delegate
@@ -188,6 +188,8 @@ const double ENDING_SCROLL_OFFSET = 640.0;
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     RGCollectionViewCell *cell = (RGCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:indexPath];
+    
+    cell.alpha = 0.0;
 
     // Find the original frame for the card (starting off point)
     self.cardOriginalFrame = [self.collectionView convertRect:cell.frame
@@ -205,8 +207,6 @@ const double ENDING_SCROLL_OFFSET = 640.0;
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-//    NSLog(@"Did end decelearting");
-//    NSLog(@"Offset is: %@", NSStringFromCGPoint(self.collectionView.contentOffset));
     
     [self moveToRightPosition];
     [self calculateCenterIndex];
@@ -228,31 +228,9 @@ const double ENDING_SCROLL_OFFSET = 640.0;
     }
 }
 
-- (void)wirePanToCellView:(UIView *)view
-{
-    UIPanGestureRecognizer *gesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
-    [view addGestureRecognizer:gesture];
-}
-
-- (void)handlePanGesture:(UIPanGestureRecognizer *)gestureRecognizer
-{
-    CGPoint translation = [gestureRecognizer translationInView:gestureRecognizer.view.superview];
-//    NSLog(@"Translation: %@", NSStringFromCGPoint(translation));
-    
-    if (translation.y < 0) {
-        NSLog(@"Flipping up");
-    }
-    
-    else {
-        
-    }
-}
-
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
     [self moveToRightPosition];
-//    NSLog(@"didEndDragging");
-//    NSLog(@"Offset is: %@", NSStringFromCGPoint(self.collectionView.contentOffset));
 }
 
 #pragma mark - UIViewControllerTransitioningDelegate
@@ -272,33 +250,6 @@ const double ENDING_SCROLL_OFFSET = 640.0;
     self.transition.originFrame = self.cardOriginalFrame;
     self.transition.presenting = NO;
     return self.transition;
-}
-
-
-#pragma mark - UINavigationControllerDelegate
-
-- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
-                                  animationControllerForOperation:(UINavigationControllerOperation)operation
-                                               fromViewController:(UIViewController *)fromVC
-                                                 toViewController:(UIViewController *)toVC {
-    
-//    if (operation == UINavigationControllerOperationPush) {
-//        [_interactionController wireToViewController:toVC];
-//    }
-    
-//    _flipAnimationController.reverse = operation == UINavigationControllerOperationPop;
-//    return _flipAnimationController;
-    NSLog(@"We got an animated!");
-    return nil;
-}
-
-- (id <UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController
-                          interactionControllerForAnimationController:(id <UIViewControllerAnimatedTransitioning>) animationController {
-    
-    
-    NSLog(@"We got an interactive!");
-    return nil;
-    //    return _interactionController.interactionInProgress ? _interactionController : nil;
 }
 
 
@@ -380,6 +331,14 @@ const double ENDING_SCROLL_OFFSET = 640.0;
     CGFloat currentOffsetNormalized = currentOffset.x - INITIAL_SCROLL_OFFSET;
     int roundedOffset = lroundf(currentOffsetNormalized/cardWidth);
     return roundedOffset;
+}
+
+- (void)cardDismissed:(NSNotification *)notification
+{
+    RGCollectionViewCell *centerCell = (RGCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:self.centerCardIndexPath];
+    
+    centerCell.alpha = 1.0;
+
 }
 
 @end
