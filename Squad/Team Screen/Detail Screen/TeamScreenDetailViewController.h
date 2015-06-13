@@ -15,6 +15,11 @@
 @interface TeamScreenDetailViewController : UIViewController
 
 @property (strong, nonatomic) UIColor *cardBaseColor;
+@property (weak, nonatomic) IBOutlet UIImageView *profileFace;
+@property (strong, nonatomic) UIImage *myProfileImage;
+@property (weak, nonatomic) IBOutlet UILabel *memberNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *memberStatusLabel;
+@property (strong, nonatomic) NSString *memberName;
 
 // Steps circle
 @property (strong, nonatomic) VAProgressCircle *circleChart;
@@ -28,6 +33,13 @@
 
 // bloodGlucoseSection
 @property (weak, nonatomic) IBOutlet UICountingLabel *bloodGlucoseLabel;
+
+
+// Stars
+@property (weak, nonatomic) IBOutlet UIButton *stepsStar;
+@property (weak, nonatomic) IBOutlet UIButton *caloriesStar;
+@property (weak, nonatomic) IBOutlet UIButton *glucoseStar;
+
 
 @end
     

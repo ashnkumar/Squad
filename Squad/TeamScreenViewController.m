@@ -89,11 +89,11 @@ const double ENDING_SCROLL_OFFSET = 640.0;
     self.cardsList = [@[@"clearColor", @"orangeCard", @"blueCard", @"yellowCard", @"tealCard", @"purpleCard", @"clearColor"] mutableCopy];
     
     self.teamMembersList = @{@"0": @[@"", @""],
-                             @"1": @[@"Ashwin K.", @"-20 mg/dL"],
-                             @"2": @[@"Justin Y.", @"+650 calories"],
-                             @"3": @[@"Catherine J.", @"+565 steps"],
-                             @"4": @[@"Joe S.", @"+140 calories"],
-                             @"5": @[@"Xander P.", @"+245 steps"],
+                             @"1": @[@"Ashwin K.", @"-20 mg/dL", [UIImage imageNamed:@"ashwinFace"]],
+                             @"2": @[@"Justin Y.", @"+650 calories", [UIImage imageNamed:@"justinFace"]],
+                             @"3": @[@"Catherine J.", @"+565 steps", [UIImage imageNamed:@"catFace"]],
+                             @"4": @[@"Jessica A.", @"+140 calories", [UIImage imageNamed:@"jessFace"]],
+                             @"5": @[@"Xander P.", @"+245 steps", [UIImage imageNamed:@"xanderFace"]],
                              @"6": @[@"", @""]};
     
     self.cardsMinorColorMappingDic = @{@"clearColor": [UIColor clearColor],
@@ -202,6 +202,8 @@ const double ENDING_SCROLL_OFFSET = 640.0;
     tdvc.transitioningDelegate = self;
     NSString *card = self.cardsList[indexPath.section];
     tdvc.cardBaseColor = (UIColor *)self.cardsMinorColorMappingDic[card];
+    tdvc.myProfileImage = (UIImage *)self.teamMembersList[[NSString stringWithFormat:@"%ld", (long)indexPath.section]][2];
+    tdvc.memberName = (NSString *)self.teamMembersList[[NSString stringWithFormat:@"%ld", (long)indexPath.section]][0];
     
     [self presentViewController:tdvc animated:YES completion:nil];
     

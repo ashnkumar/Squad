@@ -13,6 +13,13 @@
 @interface TeamScreenDetailViewController ()
 @property (weak, nonatomic) IBOutlet UIView *detailCardHeaderView;
 @property (strong, nonatomic) NSTimer *fillupTimer;
+@property (weak, nonatomic) IBOutlet UIButton *closeButton;
+
+// Stars
+@property (assign, nonatomic) BOOL stepsTakenStarPressed;
+@property (assign, nonatomic) BOOL caloriesEatenStarPressed;
+@property (assign, nonatomic) BOOL glucoseStarPressed;
+
 @end
 
 @implementation TeamScreenDetailViewController
@@ -24,6 +31,10 @@
     [self setupUI];
     [self fillCircleChart];
     
+    self.stepsTakenStarPressed = NO;
+    self.caloriesEatenStarPressed = NO;
+    self.glucoseStarPressed = NO;
+    
     // Start the filling of the bar chart
     [NSTimer scheduledTimerWithTimeInterval:1.0
                                      target:self
@@ -32,8 +43,6 @@
                                     repeats:NO];
     [self setupAllCountingLabels];
     [self startCountingLabels];
-    
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -42,6 +51,8 @@
     
     self.view.layer.cornerRadius = 10;
     self.view.layer.masksToBounds = YES;
+    self.profileFace.image = self.myProfileImage;
+    self.memberNameLabel.text = self.memberName;
     
     
     [super viewWillAppear:animated];
@@ -50,6 +61,9 @@
 - (void)setupUI
 {
     self.detailCardHeaderView.backgroundColor = self.cardBaseColor;
+    [self.closeButton setTitleColor:self.cardBaseColor forState:UIControlStateNormal];
+    [self setupStars];
+    
     [self addPieChart];
     [self addGoalLabel];
     [self addCaloriesChart];
@@ -72,6 +86,12 @@
     [self.totalStepsLabel countFrom:0 to:11300 withDuration:1.5f];
     [self.totalCaloriesLabel countFrom:0 to:1202 withDuration:1.5f];
     [self.bloodGlucoseLabel countFrom:0 to:140 withDuration:1.5f];
+}
+
+- (void)setupStars
+{
+    [self.stepsStar setBackgroundImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+    [self.stepsStar setBackgroundImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateHighlighted];
 }
 
 #pragma mark - Pie Chart
@@ -177,6 +197,50 @@
 - (void)fillBarChart:(id)sender
 {
     self.caloriesBarChart.percentage += 60;
+}
+
+
+#pragma mark - Stars
+
+- (IBAction)stepsTakenStarPressed:(id)sender
+{
+    if (self.stepsTakenStarPressed) {
+        self.stepsTakenStarPressed = NO;
+        [self.stepsStar setBackgroundImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+    }
+    
+    else {
+        self.stepsTakenStarPressed = YES;
+        [self.stepsStar setBackgroundImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+    }
+}
+
+- (IBAction)caloriesEatenStarPressed:(id)sender
+{
+    if (self.caloriesEatenStarPressed) {
+        self.caloriesEatenStarPressed = NO;
+        [self.caloriesStar setBackgroundImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+    }
+    
+    else {
+        self.caloriesEatenStarPressed = YES;
+        [self.caloriesStar setBackgroundImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+    }
+    
+}
+
+- (IBAction)glucoseStarPressed:(id)sender
+{
+    if (self.glucoseStarPressed) {
+        self.glucoseStarPressed = NO;
+        [self.glucoseStar setBackgroundImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+    }
+    
+    else {
+        self.glucoseStarPressed = YES;
+        [self.glucoseStar setBackgroundImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+    }
+    
 }
 
 
