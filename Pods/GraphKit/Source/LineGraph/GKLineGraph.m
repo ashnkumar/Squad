@@ -102,8 +102,8 @@ static CGFloat kAxisMargin = 50.0;
         CGRect frame = CGRectMake(0, 0, kDefaultLabelWidth, kDefaultLabelHeight);
         UILabel *item = [[UILabel alloc] initWithFrame:frame];
         item.textAlignment = NSTextAlignmentCenter;
-        item.font = [UIFont boldSystemFontOfSize:12];
-        item.textColor = [UIColor lightGrayColor];
+        item.font = [UIFont fontWithName:@"UbuntuCondensed-Regular" size:14];
+        item.textColor = [UIColor colorWithRed:56/255.0 green:56/255.0 blue:56/255.0 alpha:1.0];
         item.text = [self.dataSource titleForLineAtIndex:idx];
         
         [items addObject:item];
@@ -159,8 +159,9 @@ static CGFloat kAxisMargin = 50.0;
         CGRect frame = CGRectMake(0, 0, kDefaultLabelWidth, kDefaultLabelHeight);
         UILabel *item = [[UILabel alloc] initWithFrame:frame];
         item.textAlignment = NSTextAlignmentRight;
-        item.font = [UIFont boldSystemFontOfSize:12];
-        item.textColor = [UIColor lightGrayColor];
+        
+        item.font = [UIFont fontWithName:@"UbuntuCondensed-Regular" size:14];
+        item.textColor = [UIColor colorWithRed:56/255.0 green:56/255.0 blue:56/255.0 alpha:1.0];
     
         CGFloat value = [self _minValue] + (idx * [self _stepValueLabelY]);
         item.centerY = [self _positionYForLineValue:value];

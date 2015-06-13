@@ -24,7 +24,6 @@
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(startGlucoseStatsCounting:) name:@"GlucoseStatsCountup"
                                                object:nil];
-    
 }
 
 - (void)didReceiveMemoryWarning {

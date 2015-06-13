@@ -3,9 +3,21 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Ubuntu-Bold.ttf">
+            <string>Ubuntu-Bold</string>
+        </mutableArray>
+        <mutableArray key="Ubuntu-C.ttf">
+            <string>UbuntuCondensed-Regular</string>
+        </mutableArray>
+        <mutableArray key="Ubuntu-L.ttf">
+            <string>Ubuntu-Light</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CaloriesStatsScreenViewController">
             <connections>
+                <outlet property="lineGraph" destination="Ai5-Dw-yI8" id="7Rs-kZ-xjM"/>
                 <outlet property="view" destination="iN0-l3-epB" id="ib3-LL-GDW"/>
             </connections>
         </placeholder>
@@ -14,17 +26,38 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="290"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ryp-Nv-A21">
-                    <rect key="frame" x="164" y="0.0" width="46" height="30"/>
-                    <state key="normal" title="Button">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="drawLineGraph:" destination="-1" eventType="touchUpInside" id="cL4-cV-UYJ"/>
-                    </connections>
-                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="squad's average caloric intake:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vfc-38-BNn">
+                    <rect key="frame" x="53" y="8" width="269" height="23"/>
+                    <fontDescription key="fontDescription" name="Ubuntu-Light" family="Ubuntu" pointSize="20"/>
+                    <color key="textColor" red="0.1647058824" green="0.1647058824" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="222" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yko-6P-Ilq">
+                    <rect key="frame" x="139" y="30" width="97" height="45"/>
+                    <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="35"/>
+                    <color key="textColor" red="0.97254901960784312" green="0.30980392156862746" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="per meal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5c-b6-C2y">
+                    <rect key="frame" x="154" y="72" width="67" height="21"/>
+                    <fontDescription key="fontDescription" name="UbuntuCondensed-Regular" family="Ubuntu Condensed" pointSize="18"/>
+                    <color key="textColor" red="0.2196078431372549" green="0.2196078431372549" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ai5-Dw-yI8" customClass="GKLineGraph">
+                    <rect key="frame" x="22" y="117" width="331" height="163"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="163" id="mdW-bm-p5X"/>
+                        <constraint firstAttribute="width" constant="331" id="tCw-ja-FST"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="Ai5-Dw-yI8" secondAttribute="centerX" id="Cid-qt-mcy"/>
+                <constraint firstItem="Ai5-Dw-yI8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="117" id="tbd-hF-cwj"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="248.5" y="472"/>

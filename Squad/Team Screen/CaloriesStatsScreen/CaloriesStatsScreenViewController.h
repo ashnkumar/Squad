@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GraphKit.h"
 
-@interface CaloriesStatsScreenViewController : UIViewController
-
+@interface CaloriesStatsScreenViewController : UIViewController <GKLineGraphDataSource>
+@property (weak, nonatomic) IBOutlet GKLineGraph *lineGraph;
 @end

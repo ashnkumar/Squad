@@ -294,7 +294,12 @@ const double ENDING_SCROLL_OFFSET = 640.0;
 {
     self.myPageControl.currentPage = index;
     
-    if (index == 2) {
+    if (index == 1) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"DrawLineGraph"
+                                                            object:self];
+    }
+    
+    else if (index == 2) {
         // Glucose screen
         [[NSNotificationCenter defaultCenter] postNotificationName:@"GlucoseStatsCountup"
                                                             object:self];

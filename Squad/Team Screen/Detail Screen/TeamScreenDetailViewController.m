@@ -206,12 +206,14 @@
 {
     if (self.stepsTakenStarPressed) {
         self.stepsTakenStarPressed = NO;
-        [self.stepsStar setBackgroundImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+        [self.stepsStar setBackgroundImage:[UIImage imageNamed:@"starUnfilled"]
+                                  forState:UIControlStateNormal];
     }
     
     else {
         self.stepsTakenStarPressed = YES;
-        [self.stepsStar setBackgroundImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+        [self.stepsStar setBackgroundImage:[UIImage imageNamed:@"starFilled"]
+                                  forState:UIControlStateNormal];
     }
 }
 
@@ -219,12 +221,14 @@
 {
     if (self.caloriesEatenStarPressed) {
         self.caloriesEatenStarPressed = NO;
-        [self.caloriesStar setBackgroundImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+        [self.caloriesStar setBackgroundImage:[UIImage imageNamed:@"starUnfilled"]
+                                     forState:UIControlStateNormal];
     }
     
     else {
         self.caloriesEatenStarPressed = YES;
-        [self.caloriesStar setBackgroundImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+        [self.caloriesStar setBackgroundImage:[UIImage imageNamed:@"starFilled"]
+                                     forState:UIControlStateNormal];
     }
     
 }
@@ -233,12 +237,14 @@
 {
     if (self.glucoseStarPressed) {
         self.glucoseStarPressed = NO;
-        [self.glucoseStar setBackgroundImage:[UIImage imageNamed:@"starUnfilled"] forState:UIControlStateNormal];
+        [self.glucoseStar setBackgroundImage:[UIImage imageNamed:@"starUnfilled"]
+                                    forState:UIControlStateNormal];
     }
     
     else {
         self.glucoseStarPressed = YES;
-        [self.glucoseStar setBackgroundImage:[UIImage imageNamed:@"starFilled"] forState:UIControlStateNormal];
+        [self.glucoseStar setBackgroundImage:[UIImage imageNamed:@"starFilled"]
+                                    forState:UIControlStateNormal];
     }
     
 }
