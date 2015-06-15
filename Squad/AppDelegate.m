@@ -30,7 +30,6 @@
     
     
     
-    // Set up notification for vide:
     if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]){
         [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
     }
@@ -41,10 +40,26 @@
     localNotification.alertAction = @"Show me the offers";
     localNotification.timeZone = [NSTimeZone defaultTimeZone];
     
-    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+//    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+    
+    NSString *requestedURL= @"https://api.validic.com/v1/organizations/541cfcb4965fe2d68300017f/users/d6j-FNeopKwph4BrXSc5/fitness.json?access_token=2c3dfe3958d7b485c7dad3eef334b8a036351199a6f6dcd6f8385238ccf30efd";
+    NSURL *url = [NSURL URLWithString:[requestedURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    
     
     return YES;
 }
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+    // A response has been received, this is where we initialize the instance var you created
+    // so that we can append data to it in the didReceiveData method
+    // Furthermore, this method is called each time there is a redirect so reinitializing it
+    // also serves to clear it
+    NSLog(@"RESPONSE: %@", response);
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
