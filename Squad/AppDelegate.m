@@ -28,6 +28,21 @@
     
     [[UITabBar appearance] setTintColor:[AppConstants AKPurpleBaseColor]];
     
+    
+    
+    // Set up notification for vide:
+    if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]){
+        [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
+    }
+    
+    UILocalNotification* localNotification = [[UILocalNotification alloc] init];
+    localNotification.fireDate = [[NSDate alloc] initWithTimeIntervalSinceNow:10];
+    localNotification.alertBody = @"Cat just finished her run!";
+    localNotification.alertAction = @"Show me the offers";
+    localNotification.timeZone = [NSTimeZone defaultTimeZone];
+    
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+    
     return YES;
 }
 

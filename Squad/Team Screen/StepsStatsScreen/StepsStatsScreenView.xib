@@ -4,10 +4,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="Ubuntu-C.ttf">
-            <string>UbuntuCondensed-Regular</string>
-            <string>UbuntuCondensed-Regular</string>
-        </mutableArray>
         <mutableArray key="Ubuntu-L.ttf">
             <string>Ubuntu-Light</string>
         </mutableArray>
@@ -37,18 +33,6 @@
                     <rect key="frame" x="95" y="53" width="185" height="44"/>
                     <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="35"/>
                     <color key="textColor" red="1" green="0.396078431372549" blue="0.0039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="goal:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Omb-Jx-qTR">
-                    <rect key="frame" x="168" y="134" width="38" height="21"/>
-                    <fontDescription key="fontDescription" name="UbuntuCondensed-Regular" family="Ubuntu Condensed" pointSize="13"/>
-                    <color key="textColor" red="1" green="0.30196078431372547" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="50,000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UyB-Du-ebX">
-                    <rect key="frame" x="168" y="153" width="38" height="21"/>
-                    <fontDescription key="fontDescription" name="UbuntuCondensed-Regular" family="Ubuntu Condensed" pointSize="13"/>
-                    <color key="textColor" red="1" green="0.30196078430000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>

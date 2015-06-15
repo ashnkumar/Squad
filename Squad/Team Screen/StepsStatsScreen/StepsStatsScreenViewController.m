@@ -25,6 +25,11 @@
     [self fillChart];
     [self startStepsCounting];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(countSteps:)
+                                                 name:@"StartStepsCounting"
+                                               object:nil];
+    
 }
 
 - (void)setupUI
@@ -49,6 +54,7 @@
     self.circleChart.transitionType = VAProgressCircleColorTransitionTypeGradual;
     
     [self.view addSubview:self.circleChart];
+    [self.view sendSubviewToBack:self.circleChart];
 }
 
 - (void)addGoalLabel
@@ -83,6 +89,13 @@
                                                       selector:@selector(fillupIncrement)
                                                       userInfo:nil
                                                        repeats:YES];
+}
+
+- (void)countSteps:(NSNotification *)notification
+{
+    [self.groupStepsLabel countFrom:0 to:52688 withDuration:1.5f];
+    [self resetChart];
+    [self fillChart];
 }
 
 - (void)startStepsCounting

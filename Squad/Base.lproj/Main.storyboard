@@ -305,7 +305,7 @@
                                 <color key="textColor" red="0.16862745098039217" green="0.16862745098039217" blue="0.16862745098039217" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="140" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNk-aU-RK5" customClass="UICountingLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="127" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNk-aU-RK5" customClass="UICountingLabel">
                                 <rect key="frame" x="198" y="364" width="205" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="CVU-3O-cOp"/>
@@ -435,21 +435,36 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ohu-oo-CoD">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="67"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="squad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xq-Hi-j3c">
-                                        <rect key="frame" x="256" y="14" width="90" height="51"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="philadelphia rankings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xq-Hi-j3c">
+                                        <rect key="frame" x="142" y="14" width="319" height="51"/>
                                         <constraints>
+                                            <constraint firstAttribute="width" constant="319" id="0KD-hS-5Af"/>
                                             <constraint firstAttribute="height" constant="51" id="BaW-Jc-Vyu"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="51" id="vwL-4a-DMC"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="33"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnO-Wp-FD4">
+                                        <rect key="frame" x="142" y="14" width="319" height="51"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="magicButtonPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="3O0-3E-tLh"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.41960784313725491" green="0.0" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="8xq-Hi-j3c" firstAttribute="top" secondItem="ohu-oo-CoD" secondAttribute="top" constant="14" id="0aV-BY-dWu"/>
-                                    <constraint firstAttribute="centerX" secondItem="8xq-Hi-j3c" secondAttribute="centerX" constant="-0.5" id="Ke0-I5-ZSW"/>
+                                    <constraint firstItem="8xq-Hi-j3c" firstAttribute="centerX" secondItem="cnO-Wp-FD4" secondAttribute="centerX" id="DVm-XE-13M"/>
+                                    <constraint firstAttribute="centerX" secondItem="8xq-Hi-j3c" secondAttribute="centerX" constant="-1.5" id="Ke0-I5-ZSW"/>
                                     <constraint firstAttribute="height" constant="67" id="Mw2-cy-xW0"/>
+                                    <constraint firstItem="8xq-Hi-j3c" firstAttribute="centerY" secondItem="cnO-Wp-FD4" secondAttribute="centerY" id="R9d-WR-cYq"/>
+                                    <constraint firstItem="8xq-Hi-j3c" firstAttribute="height" secondItem="cnO-Wp-FD4" secondAttribute="height" id="gmF-Wu-EqS"/>
+                                    <constraint firstItem="8xq-Hi-j3c" firstAttribute="width" secondItem="cnO-Wp-FD4" secondAttribute="width" id="zfV-Br-tCw"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="285" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="38a-ns-bB2" customClass="HVTableView">

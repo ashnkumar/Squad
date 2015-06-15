@@ -85,7 +85,7 @@
 {
     [self.totalStepsLabel countFrom:0 to:11300 withDuration:1.5f];
     [self.totalCaloriesLabel countFrom:0 to:1202 withDuration:1.5f];
-    [self.bloodGlucoseLabel countFrom:0 to:140 withDuration:1.5f];
+    [self.bloodGlucoseLabel countFrom:0 to:127 withDuration:1.5f];
 }
 
 - (void)setupStars
@@ -261,6 +261,7 @@
 
 - (IBAction)didPressDismissButton:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
 
 

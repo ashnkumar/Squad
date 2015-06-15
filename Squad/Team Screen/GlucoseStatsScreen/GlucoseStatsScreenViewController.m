@@ -33,7 +33,7 @@
 
 - (void)startGlucoseStatsCounting:(NSNotification *)notification
 {
-    [self.teamsCurrentGlucose countFrom:0 to:140 withDuration:1.5f];
+    [self.teamsCurrentGlucose countFrom:0 to:125 withDuration:1.5f];
 }
 
 /*

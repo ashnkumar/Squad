@@ -347,6 +347,8 @@ const double ENDING_SCROLL_OFFSET = 640.0;
     RGCollectionViewCell *centerCell = (RGCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:self.centerCardIndexPath];
     
     centerCell.alpha = 1.0;
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"StartStepsCounting" object:self];
 
 }
 
